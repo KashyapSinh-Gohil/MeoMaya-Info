@@ -5,36 +5,117 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MeoMaya Documentation</title>
+    <meta name="description" content="MeoMaya is a pure‑Python, low‑energy, high‑speed NLP framework with modular pipelines, CLI, and an offline REST API.">
+    <meta name="robots" content="index, follow">
+    <meta name="color-scheme" content="light dark">
+    <meta name="theme-color" content="#f0f2f5" media="(prefers-color-scheme: light)">
+    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
+    <link rel="canonical" href="/">
+    <!-- Favicons: auto-switching by color scheme -->
+    <link rel="icon" type="image/png" href="Light.png" media="(prefers-color-scheme: light)">
+    <link rel="icon" type="image/png" href="Dark.png" media="(prefers-color-scheme: dark)">
+    <link rel="apple-touch-icon" href="Light.png">
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="MeoMaya Documentation">
+    <meta property="og:description" content="A pure‑Python, high‑speed NLP framework with modular pipelines and an offline REST API.">
+    <meta property="og:image" content="Light.png">
+    <meta property="og:image:alt" content="MeoMaya brand mark">
+    <meta property="og:locale" content="en_US">
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="MeoMaya Documentation">
+    <meta name="twitter:description" content="A pure‑Python, high‑speed NLP framework with modular pipelines and an offline REST API.">
+    <meta name="twitter:image" content="Light.png">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+
+        /* Theme variables */
+        :root {
+            --bg: #f0f2f5;
+            --text: #333333;
+            --text-muted: #666666;
+            --sidebar-bg: #2c3e50;
+            --sidebar-text: #ecf0f1;
+            --sidebar-link: #bdc3c7;
+            --sidebar-hover-bg: #34495e;
+            --header-border: #e0e0e0;
+            --heading: #2c3e50;
+            --subheading: #34495e;
+            --accent: #3498db;
+            --accent-hover: #2980b9;
+            --inline-code-bg: #e9ecef;
+            --code-bg: #282c34;
+            --code-text: #abb2bf;
+            --note-bg: #e7f3fe;
+            --note-border: #3498db;
+            --copy-btn-bg: #6c757d;
+            --copy-btn-hover-bg: #5a6268;
+            --copy-btn-success-bg: #28a745;
+            --elevation: rgba(0,0,0,0.1);
+        }
+        /* System dark mode */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --bg: #0f1115;
+                --text: #e5e7eb;
+                --text-muted: #a1a1aa;
+                --sidebar-bg: #111827;
+                --sidebar-text: #e5e7eb;
+                --sidebar-link: #9aa4b2;
+                --sidebar-hover-bg: #1f2937;
+                --header-border: #222222;
+                --heading: #e5e7eb;
+                --subheading: #e2e8f0;
+                --accent: #60a5fa;
+                --accent-hover: #3b82f6;
+                --inline-code-bg: #272b33;
+                --code-bg: #1f2937;
+                --code-text: #e5e7eb;
+                --note-bg: #0b1220;
+                --note-border: #3b82f6;
+                --copy-btn-bg: #3b3f45;
+                --copy-btn-hover-bg: #4b5563;
+                --copy-btn-success-bg: #22c55e;
+                --elevation: rgba(0,0,0,0.4);
+            }
+        }
 
         body {
             font-family: 'Open Sans', sans-serif;
             line-height: 1.7;
             margin: 0;
             padding: 0;
-            background-color: #f0f2f5; /* Lighter background */
-            color: #333; /* Darker text for better contrast */
+            background-color: var(--bg);
+            color: var(--text);
             font-size: 16px;
             cursor: default; /* Custom default cursor */
         }
         .container {
-            display: flex;
-            min-height: 100vh; /* Ensure container takes full height */
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 16px;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 24px;
+            min-height: 100vh;
         }
         .sidebar {
-            width: 280px; /* Slightly wider sidebar */
-            background-color: #2c3e50; /* Darker, more professional sidebar */
-            color: #ecf0f1; /* Lighter text in sidebar */
-            position: fixed;
-            height: 100%;
-            overflow-y: auto;
-            padding: 30px 20px; /* More padding */
-            box-shadow: 2px 0 5px rgba(0,0,0,0.1); /* Subtle shadow */
+            background-color: var(--sidebar-bg);
+            color: var(--sidebar-text);
+            border-radius: 12px;
+            padding: 12px;
+            border: 1px solid var(--header-border);
+            position: sticky;
+            top: 90px;
+            align-self: start;
+            max-height: calc(100vh - 110px);
+            overflow: auto;
+            box-shadow: none;
         }
         .sidebar h2 {
             font-family: 'Lato', sans-serif;
-            color: #ecf0f1;
+            color: var(--sidebar-text);
             margin-top: 0;
             margin-bottom: 30px;
             font-size: 1.8rem;
@@ -43,7 +124,7 @@
             padding-bottom: 15px;
         }
         .sidebar a {
-            color: #bdc3c7; /* Softer link color */
+            color: var(--sidebar-link);
             text-decoration: none;
             display: block;
             padding: 12px 15px; /* More padding for links */
@@ -52,32 +133,34 @@
             font-size: 0.95rem;
         }
         .sidebar a:hover, .sidebar a.active {
-            background-color: #34495e; /* Darker background on hover/active */
+            background-color: var(--sidebar-hover-bg);
             color: #fff;
             padding-left: 20px; /* Slight indent on hover/active */
             transform: translateX(3px); /* Subtle slide effect */
             cursor: pointer; /* Custom cursor for interactive elements */
         }
         .main-content {
-            margin-left: 280px; /* Match sidebar width */
-            padding: 40px 60px; /* More generous padding */
-            width: calc(100% - 280px);
-            box-sizing: border-box; /* Include padding in width calculation */
+            margin-left: 0;
+            padding: 0 0 24px;
+            width: 100%;
+            box-sizing: border-box;
         }
         header {
-            border-bottom: 1px solid #e0e0e0; /* Lighter border */
-            padding-bottom: 25px;
-            margin-bottom: 40px;
+            position: sticky; top: 0; z-index: 50;
+            backdrop-filter: saturate(180%) blur(10px);
+            background: color-mix(in srgb, var(--bg) 86%, transparent);
+            border-bottom: 1px solid var(--header-border);
+            padding: 10px 0;
         }
         header h1 {
             font-family: 'Lato', sans-serif;
             font-size: 3rem; /* Larger main heading */
             margin-bottom: 10px;
-            color: #2c3e50;
+            color: var(--heading);
         }
         header p {
             font-size: 1.1rem;
-            color: #666;
+            color: var(--text-muted);
         }
         section {
             margin-bottom: 50px; /* More space between sections */
@@ -87,21 +170,21 @@
         h2 {
             font-family: 'Lato', sans-serif;
             font-size: 2.2rem; /* Larger section headings */
-            border-bottom: 2px solid #3498db; /* Accent color for headings */
+            border-bottom: 2px solid var(--accent);
             padding-bottom: 15px;
             margin-top: 0;
-            color: #2c3e50;
+            color: var(--heading);
             margin-bottom: 25px;
         }
         h3 {
             font-family: 'Lato', sans-serif;
             font-size: 1.7rem; /* Larger sub-headings */
-            color: #34495e;
+            color: var(--subheading);
             margin-top: 30px;
             margin-bottom: 15px;
         }
         code {
-            background-color: #e9ecef;
+            background-color: var(--inline-code-bg);
             padding: 0.2em 0.4em;
             margin: 0;
             font-size: 90%; /* Slightly larger inline code */
@@ -109,15 +192,16 @@
             font-family: 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* Monospace font */
         }
         pre {
-            background-color: #282c34; /* Darker code block background */
-            color: #abb2bf; /* Lighter text for code */
-            padding: 25px; /* More padding */
-            border-radius: 8px; /* More rounded corners */
+            background-color: var(--code-bg);
+            color: var(--code-text);
+            padding: 16px;
+            border-radius: 12px;
             overflow-x: auto;
             position: relative;
             margin-top: 20px;
             margin-bottom: 30px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for code blocks */
+            box-shadow: 0 4px 8px var(--elevation);
+            border: 1px solid #1f2937;
         }
         pre code {
             background: none;
@@ -126,37 +210,14 @@
             font-size: 0.9rem; /* Slightly smaller font for code blocks */
             line-height: 1.5;
         }
-        .copy-btn {
-            position: absolute;
-            top: 15px;
-            right: 15px;
-            background-color: #6c757d;
-            color: white;
-            border: none;
-            padding: 8px 15px; /* Larger button */
-            border-radius: 5px;
-            cursor: pointer; /* Custom cursor for interactive elements */
-            opacity: 0.8;
-            transition: opacity 0.3s, background-color 0.3s, transform 0.2s ease; /* Added transform transition */
-            font-size: 0.85rem;
-        }
-        pre:hover .copy-btn {
-            opacity: 1;
-        }
-        .copy-btn:hover {
-            background-color: #5a6268;
-            transform: translateY(-2px); /* Subtle lift effect */
-        }
-        .copy-btn.copied {
-            background-color: #28a745;
-        }
+
         .note {
-            background-color: #e7f3fe;
-            border-left: 6px solid #3498db; /* Accent color for notes */
+            background-color: var(--note-bg);
+            border-left: 6px solid var(--note-border);
             padding: 20px;
             margin: 30px 0;
             border-radius: 5px;
-            color: #2c3e50;
+            color: var(--heading);
         }
         .note p {
             margin: 0;
@@ -170,26 +231,185 @@
             margin-bottom: 8px;
         }
         a {
-            color: #3498db; /* Accent color for links */
+            color: var(--accent);
             text-decoration: none;
             transition: color 0.3s, transform 0.2s ease; /* Added transform transition */
             cursor: pointer; /* Custom cursor for interactive elements */
         }
         a:hover {
-            color: #2980b9; /* Darker accent on hover */
+            color: var(--accent-hover);
             text-decoration: underline;
             transform: translateY(-1px); /* Subtle lift effect */
         }
 
+        /* Template header and layout */
+        html { scroll-behavior: smooth; }
+        header{ position: sticky; top: 0; z-index: 40; backdrop-filter: saturate(180%) blur(10px); background: color-mix(in srgb, var(--bg) 86%, transparent); border-bottom:1px solid var(--header-border); }
+        .bar{ display:flex; align-items:center; gap:12px; padding:12px 0; }
+        .btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--header-border); border-radius:12px; background:var(--panel); color:var(--heading); cursor:pointer }
+        .btn:hover{ box-shadow: 0 6px 24px var(--elevation); }
+        .icon{ width:18px; height:18px; opacity:.8 }
+        .search{ flex:1; display:flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--header-border); border-radius:12px; background:var(--panel) }
+        .search input{ flex:1; background:transparent; border:0; outline:0; color:var(--heading) }
+        .brand{ display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px; color: var(--heading); }
+        .pill{ font-size:12px; border:1px solid var(--header-border); padding:4px 8px; border-radius:999px; color: var(--text-muted) }
+
+        .layout{ display:grid; grid-template-columns:260px 1fr; gap:24px; padding:24px 0 }
+        @media(max-width: 1000px){
+            .layout{ grid-template-columns:1fr }
+            nav.sidebar{ position:fixed; inset:64px 0 0 auto; width:min(88%,320px); max-width:92vw; transform:translateX(110%); transition:.25s transform ease; box-shadow:0 10px 30px var(--elevation) }
+            nav.sidebar.open{ transform:translateX(0) }
+            .scrim{ position:fixed; inset:0; background:rgba(0,0,0,.4); display:none }
+            .scrim.show{ display:block }
+        }
+
+        /* Sidebar refinements */
+        nav.sidebar{ border:1px solid var(--header-border); background:var(--panel); border-radius:12px; height:calc(100dvh - 120px); overflow:auto }
+        nav .section{ padding:14px 16px; border-bottom:1px dashed var(--header-border); color:var(--text-muted); font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.12em }
+        .nav-list{ list-style:none; margin:0; padding:8px }
+        .nav-item{ margin:2px 0 }
+        .nav-link{ display:block; padding:10px; border-radius:10px; color:var(--heading) }
+        .nav-link:hover{ background: color-mix(in srgb, var(--accent) 14%, transparent) }
+        .nav-link.active{ background: color-mix(in srgb, var(--accent) 22%, transparent) }
+
+        /* Sidebar and content search inputs */
+        .sidebar .search, .content-search {
+            width: calc(100% - 24px); display:flex; align-items:center; gap:8px;
+            padding:6px 10px; border:1px solid var(--header-border);
+            border-radius:8px; background:var(--bg); color:var(--heading);
+            margin: 8px 12px;
+            position: relative;
+            z-index: 1;
+        }
+        .sidebar .search input, .content-search input { 
+            flex:1; border:0; outline:0; background:transparent; color:inherit;
+            font-size: 13px;
+            pointer-events: auto;
+            user-select: text;
+            -webkit-user-select: text;
+            -moz-user-select: text;
+            -ms-user-select: text;
+            padding: 0;
+            margin: 0;
+        }
+        .search-results { 
+            list-style:none; margin:8px 0 0; padding:0;
+            max-height: 250px;
+            overflow-y: auto;
+            border: 1px solid var(--header-border);
+            border-radius: 8px;
+            background: var(--panel);
+            width: calc(100% - 24px);
+            margin-left: 12px;
+        }
+        .search-results li { 
+            padding:8px 12px; 
+            border-bottom: 1px solid var(--header-border); 
+            margin: 0;
+            transition: background-color 0.2s ease;
+        }
+        .search-results li:last-child { border-bottom: none; }
+        .search-results li:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); }
+        .search-results a { 
+            color: var(--heading); 
+            text-decoration: none;
+            display: block;
+            font-weight: 500;
+        }
+        .search-results a:hover { text-decoration: underline; }
+        .search-results mark {
+            background-color: var(--primary);
+            color: white;
+            padding: 1px 3px;
+            border-radius: 3px;
+            font-weight: 600;
+        }
+        .no-results { 
+            padding: 16px; 
+            text-align: center; 
+            color: var(--text-muted);
+            font-style: italic;
+        }
+
+        /* Professional hover effects */
+        .nav-link, .btn, .tab {
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .nav-link::before, .btn::before, .tab::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 100%; height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
+            transition: left 0.5s ease;
+        }
+        .nav-link:hover::before, .btn:hover::before, .tab:hover::before {
+            left: 100%;
+        }
+        .nav-link:hover, .btn:hover, .tab:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+        .nav-link:active, .btn:active, .tab:active {
+            transform: translateY(0);
+            transition: transform 0.1s ease;
+        }
+        
+        /* Code block hover effects */
+        pre {
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        pre:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
+            border-color: var(--accent);
+        }
+        
+        /* Section hover effects */
+        section {
+            transition: all 0.3s ease;
+            position: relative;
+        }
+        section:hover {
+            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+        }
+        section::after {
+            content: '';
+            position: absolute;
+            bottom: 0; left: 0;
+            width: 0; height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--accent-hover));
+            transition: width 0.3s ease;
+        }
+        section:hover::after {
+            width: 100%;
+        }
+        
+        /* Search input focus effects */
+        .search input, .content-search input {
+            transition: all 0.3s ease;
+        }
+        .search input:focus, .content-search input:focus {
+            transform: scale(1.02);
+            box-shadow: 0 0 0 3px rgba(106,165,255,0.1);
+        }
+        
+        /* Logo hover effect */
+        .brand-logo {
+            transition: all 0.3s ease;
+        }
+        .brand-logo:hover {
+            transform: rotate(5deg) scale(1.1);
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+        }
+
         /* Responsive adjustments */
         @media (max-width: 992px) {
-            .sidebar {
-                width: 220px;
-            }
-            .main-content {
-                margin-left: 220px;
-                padding: 30px 40px;
-            }
+            .container { grid-template-columns: 1fr; }
+            .main-content { padding: 0 0 24px; }
             header h1 {
                 font-size: 2.5rem;
             }
@@ -202,16 +422,8 @@
         }
 
         @media (max-width: 768px) {
-            .container {
-                flex-direction: column;
-            }
-            .sidebar {
-                position: static;
-                width: 100%;
-                height: auto;
-                padding: 20px;
-                box-shadow: none;
-            }
+            .container { grid-template-columns: 1fr; }
+            .sidebar { position: static; top: auto; max-height: none; padding: 12px; }
             .sidebar h2 {
                 text-align: left;
                 border-bottom: none;
@@ -221,11 +433,7 @@
             .sidebar a {
                 padding: 10px 15px;
             }
-            .main-content {
-                margin-left: 0;
-                width: 100%;
-                padding: 20px;
-            }
+            .main-content { margin-left: 0; width: 100%; padding: 20px; }
             section {
                 padding-top: 40px;
                 margin-top: -40px;
@@ -240,30 +448,85 @@
                 font-size: 1.3rem;
             }
         }
+
+        /* Brand logo images with automatic light/dark switching */
+        .brand-logo { width: 28px; height: 28px; display:block; border-radius:8px; }
+        .logo-dark { display: none; }
+        .logo-light { display: block; }
+        @media (prefers-color-scheme: dark) {
+            .logo-light { display: none; }
+            .logo-dark { display: block; }
+        }
+        /* No manual theme override; follow system only */
+
+        /* Theme toggle button (in sidebar) */
+        .theme-toggle-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            margin: 6px 0 20px 0;
+            padding: 0;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.15);
+            background: transparent;
+            color: var(--sidebar-text);
+            cursor: pointer;
+            transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
+        }
+        .theme-toggle-btn:hover {
+            background-color: var(--sidebar-hover-bg);
+            transform: translateY(-1px);
+        }
+        .theme-toggle-btn svg {
+            width: 22px;
+            height: 22px;
+            display: block;
+            fill: currentColor;
+        }
+        .theme-toggle-btn .icon { display: none; }
+        .theme-toggle-btn[data-mode="system"] .icon-system { display: block; }
+        .theme-toggle-btn[data-mode="light"] .icon-sun { display: block; }
+        .theme-toggle-btn[data-mode="dark"] .icon-moon { display: block; }
     </style>
 </head>
 <body>
-    <div class="container">
-        <nav class="sidebar">
-            <h2>MeoMaya</h2>
-            <a href="#introduction" class="active">Introduction</a>
-            <a href="#installation">Installation</a>
-            <a href="#quick-start">Quick Start</a>
-            <a href="#core-components">Core Components</a>
-             <a href="#ml-utilities">Machine Learning</a>
-             <a href="#api">REST API</a>
-             <a href="#hardware">Hardware</a>
-            <a href="#advanced-sentiment-demo">Advanced Sentiment Demo</a>
-            <a href="#cli">CLI</a>
-            <a href="#advanced-usage">Advanced Usage</a>
-            <a href="#api-reference">API Reference</a>
-            <a href="#troubleshooting">Troubleshooting</a>
+    <div class="container layout">
+        <nav class="sidebar" id="sidebar" aria-label="Sidebar">
+            <div class="section">Contents</div>
+            <div class="search"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.3-4.3M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="sidebarSearch" type="search" placeholder="Search sections..." autocomplete="off" aria-label="Search sections"/></div>
+            <ul class="nav-list" id="navList">
+                <li class="nav-item"><a class="nav-link active" href="#introduction">Introduction</a></li>
+                <li class="nav-item"><a class="nav-link" href="#installation">Installation</a></li>
+                <li class="nav-item"><a class="nav-link" href="#quick-start">Quick Start</a></li>
+                <li class="nav-item"><a class="nav-link" href="#core-components">Core Components</a></li>
+                <li class="nav-item"><a class="nav-link" href="#ml-utilities">Machine Learning</a></li>
+                <li class="nav-item"><a class="nav-link" href="#api">REST API</a></li>
+                <li class="nav-item"><a class="nav-link" href="#hardware">Hardware</a></li>
+                <li class="nav-item"><a class="nav-link" href="#advanced-sentiment-demo">Advanced Sentiment Demo</a></li>
+                <li class="nav-item"><a class="nav-link" href="#cli">CLI</a></li>
+                <li class="nav-item"><a class="nav-link" href="#advanced-usage">Advanced Usage</a></li>
+                <li class="nav-item"><a class="nav-link" href="#api-reference">API Reference</a></li>
+                <li class="nav-item"><a class="nav-link" href="#troubleshooting">Troubleshooting</a></li>
+            </ul>
         </nav>
         <main class="main-content">
-            <header>
-                <h1>MeoMaya Documentation</h1>
-                <p>A pure-Python, low-energy, high-speed NLP framework with optional multimodal pipelines, a local-only transformers wrapper, and an offline REST API.</p>
-            </header>
+            <article style="border:1px solid var(--header-border); background:var(--panel); border-radius:12px; padding:24px;">
+                <div class="hero" style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:12px;">
+                    <div class="brand" style="display:flex; align-items:center; gap:10px;">
+                        <img class="brand-logo logo-light" src="Light.png" alt="MeoMaya" style="width:28px;height:28px;border-radius:8px;">
+                        <img class="brand-logo logo-dark" src="Dark.png" alt="MeoMaya" style="width:28px;height:28px;border-radius:8px;">
+                        <h1 style="margin:0; font-size:28px;">MeoMaya Documentation</h1>
+                        <span class="pill">Docs</span>
+                    </div>
+                </div>
+                
+                <div class="content-search" role="search" aria-label="Search content">
+                    <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.3-4.3M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    <input id="contentSearch" type="search" placeholder="Search content..." autocomplete="off" />
+                </div>
+                <ul id="searchResults" class="search-results" aria-live="polite"></ul>
 
             <section id="introduction">
                 <h2>1. Introduction</h2>
@@ -272,6 +535,7 @@
                 <div class="note">
                     <p><strong>Philosophy:</strong> MeoMaya is built on the principle of providing core NLP functionalities in a clear and accessible manner. It prioritizes speed and low resource consumption, making it suitable for a wide range of applications, from web backends to embedded systems.</p>
                 </div>
+                <div class="callout success"><strong>Tip:</strong> Use the sidebar to jump across sections quickly.</div>
             </section>
 
             <section id="installation">
@@ -514,50 +778,346 @@ print(result)</code></pre>
             </section>
         </main>
     </div>
+    <div class="scrim" id="scrim"></div>
     <script>
-        // Add copy to clipboard buttons to all pre tags
-        const preTags = document.querySelectorAll('pre');
-        preTags.forEach(pre => {
-            const code = pre.querySelector('code');
-            if (code) {
-                const button = document.createElement('button');
-                button.innerText = 'Copy';
-                button.classList.add('copy-btn');
-                button.addEventListener('click', () => {
-                    const content = code.innerText;
-                    navigator.clipboard.writeText(content).then(() => {
-                        button.innerText = 'Copied!';
-                        button.classList.add('copied');
-                        setTimeout(() => {
-                            button.innerText = 'Copy';
-                            button.classList.remove('copied');
-                        }, 2000);
-                    });
-                });
-                pre.appendChild(button);
+        // Structured data (JSON-LD)
+        const ld = {
+            "@context": "https://schema.org",
+            "@type": "SoftwareApplication",
+            "name": "MeoMaya",
+            "applicationCategory": "NLP Framework",
+            "operatingSystem": "Cross-platform",
+            "description": "Pure-Python, low-energy, high-speed NLP framework with modular pipelines and an offline REST API.",
+            "url": window.location.origin || window.location.href,
+            "image": ["Light.png", "Dark.png"],
+        };
+        const ldScript = document.createElement('script');
+        ldScript.type = 'application/ld+json';
+        ldScript.textContent = JSON.stringify(ld);
+        document.head.appendChild(ldScript);
+
+
+        
+
+
+
+        // Active link switching using IntersectionObserver
+        const navLinks = Array.from(document.querySelectorAll('.nav-link'));
+        const watched = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
+        const observer = new IntersectionObserver((entries)=>{
+            entries.forEach(e=>{
+                const idx = watched.indexOf(e.target);
+                if(idx>=0 && e.isIntersecting){
+                    navLinks.forEach(l=>l.classList.remove('active'));
+                    navLinks[idx].classList.add('active');
+                }
+            });
+        }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
+        watched.forEach(s=>observer.observe(s));
+
+        // Theme handling (system-aware with real-time updates)
+        const rootEl = document.documentElement;
+        const themeToggleBtn = document.getElementById('themeToggle');
+        const THEME_KEY = 'themePreference'; // 'system' | 'light' | 'dark'
+
+        function setButtonLabel(pref) {
+            if (!themeToggleBtn) return;
+            themeToggleBtn.setAttribute('data-mode', pref);
+            themeToggleBtn.setAttribute('aria-label', `Theme: ${pref}`);
+        }
+
+        function applyThemePreference(pref) {
+            if (pref === 'light' || pref === 'dark') {
+                rootEl.setAttribute('data-theme', pref);
+            } else {
+                rootEl.removeAttribute('data-theme'); // follow system
+                pref = 'system';
+            }
+            localStorage.setItem(THEME_KEY, pref);
+            setButtonLabel(pref);
+        }
+
+        function getThemePreference() {
+            const saved = localStorage.getItem(THEME_KEY);
+            return saved === 'light' || saved === 'dark' ? saved : 'system';
+        }
+
+        // Initialize
+        applyThemePreference(getThemePreference());
+
+        // Toggle cycles: system -> light -> dark -> system
+        if (themeToggleBtn) {
+            themeToggleBtn.addEventListener('click', () => {
+                const current = getThemePreference();
+                const next = current === 'system' ? 'light' : (current === 'light' ? 'dark' : 'system');
+                applyThemePreference(next);
+            });
+        }
+
+        // Always react to system changes when pref is 'system'
+        const media = window.matchMedia('(prefers-color-scheme: dark)');
+        media.addEventListener('change', () => {
+            if (getThemePreference() === 'system') {
+                applyThemePreference('system');
             }
         });
 
-        // Active link switching
-        const sections = document.querySelectorAll('section');
-        const navLinks = document.querySelectorAll('.sidebar a');
+        // Mobile sidebar toggle via header menu button
+        const menuBtn = document.getElementById('sidebarToggle');
+        const sidebarEl = document.getElementById('sidebar');
+        const scrim = document.getElementById('scrim');
+        function toggleNav(force){
+            const open = force ?? !sidebarEl.classList.contains('open');
+            sidebarEl.classList.toggle('open', open);
+            scrim.classList.toggle('show', open);
+        }
+        if(menuBtn){ menuBtn.addEventListener('click', ()=>toggleNav()); }
+        if(scrim){ scrim.addEventListener('click', ()=>toggleNav(false)); }
 
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop;
-                if (pageYOffset >= sectionTop - 65) {
-                    current = section.getAttribute('id');
+        // Sidebar live search filter
+        const sidebarSearch = document.getElementById('sidebarSearch');
+        if(sidebarSearch){
+            const sideLinks = document.querySelectorAll('.nav-list .nav-link');
+            
+            // Debug: Check if input is working
+            console.log('Sidebar search input found:', sidebarSearch);
+            
+            sidebarSearch.addEventListener('input', (e)=>{
+                console.log('Search input event:', e.target.value);
+                const q = sidebarSearch.value.toLowerCase();
+                sideLinks.forEach(link => {
+                    const text = link.textContent.toLowerCase();
+                    const shouldShow = text.includes(q);
+                    link.parentElement.style.display = shouldShow ? '' : 'none';
+                });
+            });
+            
+            // Also listen for keydown to ensure it's working
+            sidebarSearch.addEventListener('keydown', (e)=>{
+                console.log('Key pressed:', e.key);
+            });
+        }
+
+        // Content search: scans ALL content on the site for comprehensive search
+        const contentSearch = document.getElementById('contentSearch');
+        const searchResults = document.getElementById('searchResults');
+        if(contentSearch && searchResults){
+            // Get ALL searchable content from the entire page
+            const getAllSearchableContent = () => {
+                const searchable = [];
+                const processedElements = new Set();
+                
+                // Search in main content
+                const mainElements = document.querySelectorAll('main *');
+                mainElements.forEach(element => {
+                    if(processedElements.has(element) || 
+                       element.tagName === 'SCRIPT' || 
+                       element.tagName === 'STYLE' ||
+                       element.tagName === 'INPUT' ||
+                       element.tagName === 'BUTTON' ||
+                       element.classList.contains('search') ||
+                       element.classList.contains('search-results')){
+                        return;
+                    }
+                    
+                    const text = element.textContent?.trim() || '';
+                    if(text.length > 5 && !processedElements.has(element.parentElement)) {
+                        let section = element.closest('section');
+                        let heading = element.closest('h1, h2, h3, h4, h5, h6');
+                        
+                        if(!section && heading) {
+                            section = heading.closest('section') || heading.parentElement;
+                        }
+                        
+                        if(!section) {
+                            section = element.closest('main') || element;
+                        }
+                        
+                        const sectionTitle = section.querySelector('h1, h2, h3')?.textContent || 
+                                           section.tagName === 'H1' || section.tagName === 'H2' || section.tagName === 'H3' ? section.textContent : 
+                                           'Content';
+                        
+                        const sectionId = section.id || 
+                                        section.querySelector('[id]')?.id || 
+                                        'content';
+                        
+                        // Get all text content from this section
+                        const allText = section.innerText.replace(/\s+/g, ' ').trim();
+                        const headings = Array.from(section.querySelectorAll('h1, h2, h3, h4, h5, h6')).map(h => h.textContent);
+                        
+                        searchable.push({
+                            id: sectionId,
+                            title: sectionTitle,
+                            text: allText,
+                            headings: headings,
+                            element: section
+                        });
+                        
+                        processedElements.add(section);
+                    }
+                });
+                
+                return searchable;
+            };
+            
+            const searchable = getAllSearchableContent();
+            
+            contentSearch.addEventListener('input', ()=>{
+                const q = contentSearch.value.trim().toLowerCase();
+                searchResults.innerHTML = '';
+                
+                if(!q || q.length < 2){ 
+                    searchResults.style.display = 'none';
+                    return; 
+                }
+                
+                searchResults.style.display = 'block';
+                
+                // Enhanced search with better relevance scoring and text highlighting
+                const matches = searchable
+                    .map(s => {
+                        const titleMatch = s.title.toLowerCase().includes(q);
+                        const contentMatch = s.text.toLowerCase().includes(q);
+                        const headingMatches = s.headings.filter(h => h.toLowerCase().includes(q));
+                        
+                        if(titleMatch || contentMatch || headingMatches.length > 0) {
+                            // Calculate relevance score
+                            let relevance = 0;
+                            if(titleMatch) relevance += 5;
+                            if(contentMatch) relevance += 1;
+                            if(headingMatches.length > 0) relevance += headingMatches.length * 2;
+                            
+                            // Create excerpt with highlighted search term
+                            let excerpt = '';
+                            if(contentMatch) {
+                                const textLower = s.text.toLowerCase();
+                                const queryIndex = textLower.indexOf(q);
+                                const start = Math.max(0, queryIndex - 60);
+                                const end = Math.min(s.text.length, queryIndex + q.length + 60);
+                                excerpt = s.text.substring(start, end);
+                                
+                                if(start > 0) excerpt = '...' + excerpt;
+                                if(end < s.text.length) excerpt = excerpt + '...';
+                                
+                                // Highlight the search term
+                                const regex = new RegExp(`(${q})`, 'gi');
+                                excerpt = excerpt.replace(regex, '<mark>$1</mark>');
+                            }
+                            
+                            return {
+                                id: s.id,
+                                title: s.title,
+                                relevance: relevance,
+                                headingMatches: headingMatches,
+                                excerpt: excerpt,
+                                element: s.element
+                            };
+                        }
+                        return null;
+                    })
+                    .filter(m => m !== null)
+                    .sort((a, b) => b.relevance - a.relevance)
+                    .slice(0, 12);
+                
+                if(matches.length === 0) {
+                    const noResults = document.createElement('li');
+                    noResults.className = 'no-results';
+                    noResults.textContent = 'No results found';
+                    searchResults.appendChild(noResults);
+                    return;
+                }
+                
+                matches.forEach(m => {
+                    const li = document.createElement('li');
+                    const a = document.createElement('a');
+                    a.href = `#${m.id}`;
+                    
+                    // Create enhanced result display
+                    const titleSpan = document.createElement('div');
+                    titleSpan.style.fontWeight = '600';
+                    titleSpan.style.marginBottom = '4px';
+                    titleSpan.textContent = m.title;
+                    
+                    a.appendChild(titleSpan);
+                    
+                    // Add excerpt with highlighted search terms
+                    if(m.excerpt) {
+                        const excerptDiv = document.createElement('div');
+                        excerptDiv.style.fontSize = '12px';
+                        excerptDiv.style.color = 'var(--text-muted)';
+                        excerptDiv.style.lineHeight = '1.4';
+                        excerptDiv.innerHTML = m.excerpt;
+                        a.appendChild(excerptDiv);
+                    }
+                    
+                    // Add heading matches if any
+                    if(m.headingMatches.length > 0) {
+                        const subSpan = document.createElement('div');
+                        subSpan.style.fontSize = '11px';
+                        subSpan.style.color = 'var(--primary)';
+                        subSpan.style.marginTop = '4px';
+                        subSpan.style.fontStyle = 'italic';
+                        subSpan.textContent = `→ ${m.headingMatches.slice(0, 3).join(', ')}`;
+                        a.appendChild(subSpan);
+                    }
+                    
+                    li.appendChild(a);
+                    searchResults.appendChild(li);
+                });
+            });
+            
+            // Hide results when clicking outside
+            document.addEventListener('click', (e) => {
+                if (!contentSearch.contains(e.target) && !searchResults.contains(e.target)) {
+                    searchResults.style.display = 'none';
                 }
             });
+        }
 
-            navLinks.forEach(a => {
-                a.classList.remove('active');
-                if (a.getAttribute('href') === '#' + current) {
-                    a.classList.add('active');
-                }
+        // Enhanced hover interactions
+        document.addEventListener('DOMContentLoaded', function() {
+            // Removed parallax effect to avoid layout shift at page end
+            
+            // Add ripple effect to buttons
+            const buttons = document.querySelectorAll('.btn, .tab');
+            buttons.forEach(button => {
+                button.addEventListener('click', function(e) {
+                    const ripple = document.createElement('span');
+                    const rect = this.getBoundingClientRect();
+                    const size = Math.max(rect.width, rect.height);
+                    const x = e.clientX - rect.left - size / 2;
+                    const y = e.clientY - rect.top - size / 2;
+                    
+                    ripple.style.cssText = `
+                        position: absolute;
+                        width: ${size}px;
+                        height: ${size}px;
+                        left: ${x}px;
+                        top: ${y}px;
+                        background: rgba(255,255,255,0.3);
+                        border-radius: 50%;
+                        transform: scale(0);
+                        animation: ripple 0.6s linear;
+                        pointer-events: none;
+                    `;
+                    
+                    this.appendChild(ripple);
+                    setTimeout(() => ripple.remove(), 600);
+                });
             });
         });
+        
+        // Add ripple animation
+        const style = document.createElement('style');
+        style.textContent = `
+            @keyframes ripple {
+                to {
+                    transform: scale(4);
+                    opacity: 0;
+                }
+            }
+        `;
+        document.head.appendChild(style);
     </script>
 </body>
 </html>
