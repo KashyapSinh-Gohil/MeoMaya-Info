@@ -1,947 +1,342 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MeoMaya Documentation</title>
-    <meta name="description" content="MeoMaya, NLP, Natural Language Processing, Python NLP, NLP in Python, Python Natural Language Processing, Python NLP library, Python NLP toolkit, lightweight NLP, modular NLP pipeline, open source NLP, pure Python NLP, fast NLP, efficient NLP, offline NLP, privacy NLP, offline AI, tokenization, tokenization in Python, Python tokenizer, text tokenizer, POS tagging, POS tagging Python, part of speech tagging, Python POS tagger, dependency parsing, dependency parser Python, Python dependency parser, sentence parsing, Python sentence parser, text classification, Python text classification, text classification in Python, sentiment analysis, sentiment analysis Python, sentiment classifier, Python sentiment analysis, sentiment detection, sentiment polarity, TF-IDF, TF-IDF Python, TF-IDF NLP, Python TF-IDF, machine learning NLP, AI NLP, Python AI, Python AI framework, AI text processing, text processing Python, Python text mining, text mining, text mining library, text mining toolkit, information extraction, information extraction Python, text analytics, text analytics Python, text summarization, summarization Python, text generation, Python text generation, language model, Python language model, lightweight AI, lightweight machine learning, Python ML, Python ML library, Python ML toolkit, REST API NLP, REST API for NLP, NLP REST API Python, FastAPI NLP, FastAPI REST API, Python REST API, Python API NLP, CLI NLP, NLP command line tool, Python CLI NLP, command line text processing, text preprocessing, text preprocessing Python, preprocessing NLP, preprocessing text data, normalization NLP, normalization Python, lemmatization, lemmatization Python, stemming, stemming Python, text cleaning, text cleaning Python, stopwords removal, stopwords Python, language detection, language detection Python, multilingual NLP, Indic NLP, Indic language processing, Hindi NLP, Gujarati NLP, Marathi NLP, Tamil NLP, Telugu NLP, Kannada NLP, Bengali NLP, Urdu NLP, Punjabi NLP, Malayalam NLP, Nepali NLP, Sanskrit NLP, AI pipeline, NLP pipeline, Python pipeline, modular NLP pipeline, customizable NLP pipeline, custom NLP, build NLP from scratch, AI text classification, AI sentiment analysis, AI dependency parser, AI tokenizer, local NLP, local AI NLP, privacy preserving NLP, NLP for small devices, NLP for embedded systems, NLP microservices, microservice NLP, Docker NLP, NLP with FastAPI, deploy NLP API, API for NLP, build NLP API, run NLP locally, offline sentiment analysis, offline text classification, offline tokenization, open source NLP framework, Python open source NLP, NLP GitHub project, NLP GitHub Python, NLP for beginners, NLP for developers, NLP for students, NLP for researchers, NLP tutorial, NLP course, Python NLP tutorial, Python NLP examples, NLP quick start, NLP documentation, NLP reference, NLP API docs, NLP troubleshooting, NLP best practices, NLP optimization, NLP speedup, NLP performance, NLP in education, NLP in research, NLP in business, NLP in analytics, analytics NLP, AI analytics, Python analytics, data science NLP, NLP for data science, machine learning text data, text machine learning, text ML Python, ML for NLP, ML for text, classification NLP, classification AI, classification Python, classification library, classification toolkit, natural language understanding, NLU Python, natural language understanding library, NLU toolkit, conversational AI, chatbot NLP, chatbot Python, Python chatbot NLP, chatbot framework, chatbot toolkit, AI chatbot NLP, chatbot sentiment analysis, chatbot text classification, chatbot dependency parsing, question answering NLP, QA system Python, QA NLP, question answering AI, AI question answering, AI QA Python, summarization AI, summarization NLP, abstractive summarization, extractive summarization, summarization library, summarization toolkit, summarization Python NLP, keyword extraction, keyword extraction Python, entity recognition, NER Python, named entity recognition Python, entity extraction, entity extraction Python, entity recognition library, entity recognition toolkit, entity recognition NLP, open source NER, topic modeling, topic modeling Python, topic modeling NLP, LDA Python, latent dirichlet allocation Python, text clustering, text clustering Python, text clustering NLP, clustering NLP, clustering AI, clustering machine learning, AI for NLP, AI language model, AI text analysis, AI processing text, AI tools for NLP, AI text analytics, NLP automation, automate NLP, NLP scripts, NLP CLI scripts, NLP code, NLP source code, NLP example code, NLP demo, NLP showcase, NLP project ideas, NLP GitHub examples, NLP dataset, NLP training, NLP testing, NLP evaluation, NLP accuracy, NLP precision, NLP recall, NLP F1 score, NLP metrics, NLP benchmark, NLP comparison, NLP tools, NLP toolkits, NLP libraries, Python NLP packages, Python NLP tools, Python NLP modules, NLP ecosystem, NLP research tools, NLP academic tools, NLP lab, AI lab NLP, academic NLP projects, research NLP projects, enterprise NLP, business NLP, startup NLP, SaaS NLP, cloud NLP, offline AI processing, lightweight AI processing, minimal NLP, minimal Python NLP, NLP performance tuning, NLP GPU, NLP CPU, NLP optimization, NLP scaling, NLP load balancing, scalable NLP, NLP concurrency, NLP threading, NLP multiprocessing, Python multiprocessing NLP, asyncio NLP, async NLP, real-time NLP, streaming NLP, NLP on edge devices, edge AI NLP, AI on Raspberry Pi, AI on Jetson, Jetson NLP, NLP IoT, IoT NLP, industrial NLP, NLP in robotics, robotics NLP, AI in robotics, text understanding, text comprehension AI, AI comprehension, AI reading, AI linguistics, computational linguistics, computational linguistics Python, linguistics NLP, linguistics AI, NLP linguistics analysis, AI linguistics toolkit, language processing AI, language technology, AI language technology, Python language technology, open source language technology, AI framework, Python AI framework, lightweight AI framework, modular AI framework, AI architecture, AI microservices, AI software, AI app, AI product, AI platform, AI SDK, AI API, AI CLI, AI documentation, AI tutorial, AI quick start, AI reference, AI support, AI troubleshooting, AI examples, AI learning, AI education, AI for education, AI for research, AI for developers, AI for students, AI for business, AI for startups, AI trends, AI innovation, AI projects, AI demo, AI GitHub, AI source code, AI datasets, AI training, AI testing, AI evaluation, AI accuracy, AI metrics, AI benchmark, AI optimization, AI performance, AI speed, AI scalability, AI efficiency
-">
-    <meta name="robots" content="index, follow">
-    <meta name="color-scheme" content="light dark">
-    <meta name="theme-color" content="#f0f2f5" media="(prefers-color-scheme: light)">
-    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)">
-    <link rel="canonical" href="https://github.com/KashyapSinh-Gohil/MeoMaya-Info/">
-    <!-- Favicons: auto-switching by color scheme -->
-    <link rel="icon" type="image/png" href="Light.png" media="(prefers-color-scheme: light)">
-    <link rel="icon" type="image/png" href="Dark.png" media="(prefers-color-scheme: dark)">
-    <link rel="apple-touch-icon" href="Light.png">
-    <!-- Open Graph -->
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="MeoMaya Documentation">
-    <meta property="og:description" content="A pure‑Python, high‑speed NLP framework with modular pipelines and an offline REST API.">
-    <meta property="og:image" content="Light.png">
-    <meta property="og:image:alt" content="MeoMaya brand mark">
-    <meta property="og:url" content="https://github.com/KashyapSinh-Gohil/MeoMaya-Info/">
-    <meta property="og:locale" content="en_US">
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="MeoMaya Documentation">
-    <meta name="twitter:description" content="A pure‑Python, high‑speed NLP framework with modular pipelines and an offline REST API.">
-    <meta name="twitter:image" content="Light.png">
-    <meta name="google-site-verification" content="google3ad7d4aacc32cb48.html">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Open+Sans:wght@400;600&display=swap');
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>MeoMaya — Info</title>
+  <meta name="description" content="MeoMaya — information page with improved UI/UX" />
+  <meta name="google-site-verification" content="google3ad7d4aacc32cb48.html">
 
-        /* Theme variables */
-        :root {
-            --bg: #f0f2f5;
-            --text: #333333;
-            --text-muted: #666666;
-            --sidebar-bg: #2c3e50;
-            --sidebar-text: #ecf0f1;
-            --sidebar-link: #bdc3c7;
-            --sidebar-hover-bg: #34495e;
-            --header-border: #e0e0e0;
-            --heading: #2c3e50;
-            --subheading: #34495e;
-            --accent: #3498db;
-            --accent-hover: #2980b9;
-            --inline-code-bg: #e9ecef;
-            --code-bg: #282c34;
-            --code-text: #abb2bf;
-            --note-bg: #e7f3fe;
-            --note-border: #3498db;
-            --copy-btn-bg: #6c757d;
-            --copy-btn-hover-bg: #5a6268;
-            --copy-btn-success-bg: #28a745;
-            --elevation: rgba(0,0,0,0.1);
-        }
-        /* System dark mode */
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --bg: #0f1115;
-                --text: #e5e7eb;
-                --text-muted: #a1a1aa;
-                --sidebar-bg: #111827;
-                --sidebar-text: #e5e7eb;
-                --sidebar-link: #9aa4b2;
-                --sidebar-hover-bg: #1f2937;
-                --header-border: #222222;
-                --heading: #e5e7eb;
-                --subheading: #e2e8f0;
-                --accent: #60a5fa;
-                --accent-hover: #3b82f6;
-                --inline-code-bg: #272b33;
-                --code-bg: #1f2937;
-                --code-text: #e5e7eb;
-                --note-bg: #0b1220;
-                --note-border: #3b82f6;
-                --copy-btn-bg: #3b3f45;
-                --copy-btn-hover-bg: #4b5563;
-                --copy-btn-success-bg: #22c55e;
-                --elevation: rgba(0,0,0,0.4);
-            }
-        }
+  <style>
+    :root{
+      --bg:#f6f7fb; --card:#ffffff; --muted:#6b7280; --accent:#2563eb;
+      --glass: rgba(255,255,255,0.6);
+      --radius:12px;
+      --max-width:1200px;
+      --panel: rgba(255,255,255,0.6);
+      color-scheme: light;
+    }
+    [data-theme="dark"]{
+      --bg:#0b1220; --card:#071128; --muted:#9aa6bf; --accent:#60a5fa; --glass: rgba(255,255,255,0.03);
+      --panel: rgba(12,20,40,0.6);
+      color-scheme: dark;
+    }
 
-        body {
-            font-family: 'Open Sans', sans-serif;
-            line-height: 1.7;
-            margin: 0;
-            padding: 0;
-            background-color: var(--bg);
-            color: var(--text);
-            font-size: 16px;
-            cursor: default; /* Custom default cursor */
-        }
-        .container {
-            max-width: 1400px;
-            margin: 0 auto;
-            padding: 0 16px;
-            display: grid;
-            grid-template-columns: 260px 1fr;
-            gap: 24px;
-            min-height: 100vh;
-        }
-        .sidebar {
-            background-color: var(--sidebar-bg);
-            color: var(--sidebar-text);
-            border-radius: 12px;
-            padding: 12px;
-            border: 1px solid var(--header-border);
-            position: sticky;
-            top: 90px;
-            align-self: start;
-            max-height: calc(100vh - 110px);
-            overflow: auto;
-            box-shadow: none;
-        }
-        .sidebar h2 {
-            font-family: 'Lato', sans-serif;
-            color: var(--sidebar-text);
-            margin-top: 0;
-            margin-bottom: 30px;
-            font-size: 1.8rem;
-            text-align: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-            padding-bottom: 15px;
-        }
-        .sidebar a {
-            color: var(--sidebar-link);
-            text-decoration: none;
-            display: block;
-            padding: 12px 15px; /* More padding for links */
-            border-radius: 5px; /* Rounded corners for links */
-            transition: all 0.3s ease-in-out, transform 0.2s ease; /* Added transform transition */
-            font-size: 0.95rem;
-        }
-        .sidebar a:hover, .sidebar a.active {
-            background-color: var(--sidebar-hover-bg);
-            color: #fff;
-            padding-left: 20px; /* Slight indent on hover/active */
-            transform: translateX(3px); /* Subtle slide effect */
-            cursor: pointer; /* Custom cursor for interactive elements */
-        }
-        .main-content {
-            margin-left: 0;
-            padding: 0 0 24px;
-            width: 100%;
-            box-sizing: border-box;
-        }
-        header {
-            position: sticky; top: 0; z-index: 50;
-            backdrop-filter: saturate(180%) blur(10px);
-            background: color-mix(in srgb, var(--bg) 86%, transparent);
-            border-bottom: 1px solid var(--header-border);
-            padding: 10px 0;
-        }
-        header h1 {
-            font-family: 'Lato', sans-serif;
-            font-size: 3rem; /* Larger main heading */
-            margin-bottom: 10px;
-            color: var(--heading);
-        }
-        header p {
-            font-size: 1.1rem;
-            color: var(--text-muted);
-        }
-        section {
-            margin-bottom: 50px; /* More space between sections */
-            padding-top: 70px; /* Adjust for fixed header/nav */
-            margin-top: -70px;
-        }
-        h2 {
-            font-family: 'Lato', sans-serif;
-            font-size: 2.2rem; /* Larger section headings */
-            border-bottom: 2px solid var(--accent);
-            padding-bottom: 15px;
-            margin-top: 0;
-            color: var(--heading);
-            margin-bottom: 25px;
-        }
-        h3 {
-            font-family: 'Lato', sans-serif;
-            font-size: 1.7rem; /* Larger sub-headings */
-            color: var(--subheading);
-            margin-top: 30px;
-            margin-bottom: 15px;
-        }
-        code {
-            background-color: var(--inline-code-bg);
-            padding: 0.2em 0.4em;
-            margin: 0;
-            font-size: 90%; /* Slightly larger inline code */
-            border-radius: 4px;
-            font-family: 'Fira Code', 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace; /* Monospace font */
-        }
-        pre {
-            background-color: var(--code-bg);
-            color: var(--code-text);
-            padding: 16px;
-            border-radius: 12px;
-            overflow-x: auto;
-            position: relative;
-            margin-top: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 4px 8px var(--elevation);
-            border: 1px solid #1f2937;
-        }
-        pre code {
-            background: none;
-            padding: 0;
-            margin: 0;
-            font-size: 0.9rem; /* Slightly smaller font for code blocks */
-            line-height: 1.5;
-        }
+    *{box-sizing:border-box}
+    html,body{height:100%}
+    body{
+      margin:0; font-family:Inter, "Open Sans", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      background:linear-gradient(180deg,var(--bg), #e9eefc 60%); color:var(--muted);
+      line-height:1.45; -webkit-font-smoothing:antialiased; -moz-osx-font-smoothing:grayscale;
+    }
 
-        .note {
-            background-color: var(--note-bg);
-            border-left: 6px solid var(--note-border);
-            padding: 20px;
-            margin: 30px 0;
-            border-radius: 5px;
-            color: var(--heading);
-        }
-        .note p {
-            margin: 0;
-            font-size: 0.95rem;
-        }
-        ul, ol {
-            margin-left: 20px;
-            margin-bottom: 20px;
-        }
-        ul li, ol li {
-            margin-bottom: 8px;
-        }
-        a {
-            color: var(--accent);
-            text-decoration: none;
-            transition: color 0.3s, transform 0.2s ease; /* Added transform transition */
-            cursor: pointer; /* Custom cursor for interactive elements */
-        }
-        a:hover {
-            color: var(--accent-hover);
-            text-decoration: underline;
-            transform: translateY(-1px); /* Subtle lift effect */
-        }
+    .container{max-width:var(--max-width); margin:28px auto; padding:20px; display:grid; gap:22px}
+    header{display:flex; align-items:center; justify-content:space-between; gap:12px}
+    .brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:inherit}
+    .logo{
+      width:48px;height:48px;border-radius:10px;background:linear-gradient(135deg,var(--accent),#7dd3fc);
+      display:inline-grid;place-items:center;font-weight:700;color:white;box-shadow:0 6px 18px rgba(37,99,235,0.12)
+    }
+    nav{display:flex;gap:12px;align-items:center}
+    nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600}
+    nav a:hover, nav a:focus{background:var(--glass);color:var(--card);outline: none}
+    .cta{background:var(--accent);color:white;padding:9px 14px;border-radius:10px;font-weight:700}
+    .hero{display:grid;grid-template-columns:1fr auto;gap:18px;padding:22px;border-radius:var(--radius);background:var(--panel);box-shadow:0 6px 24px rgba(12,20,40,0.06)}
+    .hero h1{margin:0;font-size:28px;color: #071133}
+    .hero p{margin:0;color:var(--muted)}
+    .controls{display:flex;gap:12px;align-items:center}
+    .search{flex:1;display:flex;background:var(--card);padding:8px;border-radius:10px;align-items:center;gap:8px}
+    .search input{border:0;background:transparent;outline:none;padding:8px;font-size:14px;width:100%}
+    .toggle{background:transparent;border:1px solid transparent;padding:8px;border-radius:8px;cursor:pointer}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(12,20,40,0.04);color:inherit}
+    .card h3{margin:0 0 8px 0;color:#071133}
+    footer{display:flex;justify-content:space-between;align-items:center;padding:12px 0;color:var(--muted);font-size:14px;border-top:1px dashed rgba(0,0,0,0.04)}
 
-        /* Template header and layout */
-        html { scroll-behavior: smooth; }
-        header{ position: sticky; top: 0; z-index: 40; backdrop-filter: saturate(180%) blur(10px); background: color-mix(in srgb, var(--bg) 86%, transparent); border-bottom:1px solid var(--header-border); }
-        .bar{ display:flex; align-items:center; gap:12px; padding:12px 0; }
-        .btn{ display:inline-flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--header-border); border-radius:12px; background:var(--panel); color:var(--heading); cursor:pointer }
-        .btn:hover{ box-shadow: 0 6px 24px var(--elevation); }
-        .icon{ width:18px; height:18px; opacity:.8 }
-        .search{ flex:1; display:flex; align-items:center; gap:8px; padding:8px 12px; border:1px solid var(--header-border); border-radius:12px; background:var(--panel) }
-        .search input{ flex:1; background:transparent; border:0; outline:0; color:var(--heading) }
-        .brand{ display:flex; align-items:center; gap:10px; font-weight:800; letter-spacing:.2px; color: var(--heading); }
-        .pill{ font-size:12px; border:1px solid var(--header-border); padding:4px 8px; border-radius:999px; color: var(--text-muted) }
+    /* Two column layout: left nav + content */
+    .layout{display:grid;grid-template-columns:260px 1fr;gap:20px}
+    nav.sidebar{background:var(--card);border-radius:12px;padding:12px;border:1px solid rgba(0,0,0,0.04);height:calc(100vh - 220px);overflow:auto}
+    .toc{list-style:none;padding:0;margin:8px 0}
+    .toc a{display:block;padding:8px;border-radius:8px;color:var(--muted);text-decoration:none}
+    .toc a.active{background:linear-gradient(90deg,var(--accent),#7dd3fc);color:white}
 
-        .layout{ display:grid; grid-template-columns:260px 1fr; gap:24px; padding:24px 0 }
-        @media(max-width: 1000px){
-            .layout{ grid-template-columns:1fr }
-            nav.sidebar{ position:fixed; inset:64px 0 0 auto; width:min(88%,320px); max-width:92vw; transform:translateX(110%); transition:.25s transform ease; box-shadow:0 10px 30px var(--elevation) }
-            nav.sidebar.open{ transform:translateX(0) }
-            .scrim{ position:fixed; inset:0; background:rgba(0,0,0,.4); display:none }
-            .scrim.show{ display:block }
-        }
+    main.docs{background:var(--card);padding:20px;border-radius:12px;box-shadow:0 8px 30px rgba(12,20,40,0.06);min-height:60vh}
+    main.docs h2{color:#071133;margin-top:0}
+    pre{background: #0f1724;color:#cbd5e1;padding:12px;border-radius:8px;overflow:auto}
+    code{background:rgba(0,0,0,0.04);padding:2px 6px;border-radius:4px}
+    .note{padding:12px;border-left:4px solid var(--accent);background:rgba(37,99,235,0.04);border-radius:6px;margin:16px 0;color:var(--muted)}
 
-        /* Sidebar refinements */
-        nav.sidebar{ border:1px solid var(--header-border); background:var(--panel); border-radius:12px; height:calc(100dvh - 120px); overflow:auto }
-        nav .section{ padding:14px 16px; border-bottom:1px dashed var(--header-border); color:var(--text-muted); font-weight:700; text-transform:uppercase; font-size:12px; letter-spacing:.12em }
-        .nav-list{ list-style:none; margin:0; padding:8px }
-        .nav-item{ margin:2px 0 }
-        .nav-link{ display:block; padding:10px; border-radius:10px; color:var(--heading) }
-        .nav-link:hover{ background: color-mix(in srgb, var(--accent) 14%, transparent) }
-        .nav-link.active{ background: color-mix(in srgb, var(--accent) 22%, transparent) }
+    @media (max-width:900px){
+      .layout{grid-template-columns:1fr}
+      nav.sidebar{height:auto}
+    }
 
-        /* Sidebar and content search inputs */
-        .sidebar .search, .content-search {
-            width: calc(100% - 24px); display:flex; align-items:center; gap:8px;
-            padding:6px 10px; border:1px solid var(--header-border);
-            border-radius:8px; background:var(--bg); color:var(--heading);
-            margin: 8px 12px;
-            position: relative;
-            z-index: 1;
-        }
-        .sidebar .search input, .content-search input { 
-            flex:1; border:0; outline:0; background:transparent; color:inherit;
-            font-size: 13px;
-            pointer-events: auto;
-            user-select: text;
-            -webkit-user-select: text;
-            -moz-user-select: text;
-            -ms-user-select: text;
-            padding: 0;
-            margin: 0;
-        }
-        .search-results { 
-            list-style:none; margin:8px 0 0; padding:0;
-            max-height: 250px;
-            overflow-y: auto;
-            border: 1px solid var(--header-border);
-            border-radius: 8px;
-            background: var(--panel);
-            width: calc(100% - 24px);
-            margin-left: 12px;
-        }
-        .search-results li { 
-            padding:8px 12px; 
-            border-bottom: 1px solid var(--header-border); 
-            margin: 0;
-            transition: background-color 0.2s ease;
-        }
-        .search-results li:last-child { border-bottom: none; }
-        .search-results li:hover { background: color-mix(in srgb, var(--accent) 8%, transparent); }
-        .search-results a { 
-            color: var(--heading); 
-            text-decoration: none;
-            display: block;
-            font-weight: 500;
-        }
-        .search-results a:hover { text-decoration: underline; }
-        .search-results mark {
-            background-color: var(--primary);
-            color: white;
-            padding: 1px 3px;
-            border-radius: 3px;
-            font-weight: 600;
-        }
-        .no-results { 
-            padding: 16px; 
-            text-align: center; 
-            color: var(--text-muted);
-            font-style: italic;
-        }
-
-        /* Professional hover effects */
-        .nav-link, .btn, .tab {
-            position: relative;
-            overflow: hidden;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .nav-link::before, .btn::before, .tab::before {
-            content: '';
-            position: absolute;
-            top: 0; left: -100%;
-            width: 100%; height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.1), transparent);
-            transition: left 0.5s ease;
-        }
-        .nav-link:hover::before, .btn:hover::before, .tab:hover::before {
-            left: 100%;
-        }
-        .nav-link:hover, .btn:hover, .tab:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        .nav-link:active, .btn:active, .tab:active {
-            transform: translateY(0);
-            transition: transform 0.1s ease;
-        }
-        
-        /* Code block hover effects */
-        pre {
-            transition: all 0.3s ease;
-            border: 1px solid transparent;
-        }
-        pre:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 12px 40px rgba(0,0,0,0.2);
-            border-color: var(--accent);
-        }
-        
-        /* Section hover effects */
-        section {
-            transition: all 0.3s ease;
-            position: relative;
-        }
-        section:hover {
-            box-shadow: 0 8px 30px rgba(0,0,0,0.1);
-        }
-        section::after {
-            content: '';
-            position: absolute;
-            bottom: 0; left: 0;
-            width: 0; height: 3px;
-            background: linear-gradient(90deg, var(--accent), var(--accent-hover));
-            transition: width 0.3s ease;
-        }
-        section:hover::after {
-            width: 100%;
-        }
-        
-        /* Search input focus effects */
-        .search input, .content-search input {
-            transition: all 0.3s ease;
-        }
-        .search input:focus, .content-search input:focus {
-            transform: scale(1.02);
-            box-shadow: 0 0 0 3px rgba(106,165,255,0.1);
-        }
-        
-        /* Logo hover effect */
-        .brand-logo {
-            transition: all 0.3s ease;
-        }
-        .brand-logo:hover {
-            transform: rotate(5deg) scale(1.1);
-            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
-        }
-
-        /* Responsive adjustments */
-        @media (max-width: 992px) {
-            .container { grid-template-columns: 1fr; }
-            .main-content { padding: 0 0 24px; }
-            header h1 {
-                font-size: 2.5rem;
-            }
-            h2 {
-                font-size: 1.8rem;
-            }
-            h3 {
-                font-size: 1.4rem;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .container { grid-template-columns: 1fr; }
-            .sidebar { position: static; top: auto; max-height: none; padding: 12px; }
-            .sidebar h2 {
-                text-align: left;
-                border-bottom: none;
-                padding-bottom: 0;
-                margin-bottom: 20px;
-            }
-            .sidebar a {
-                padding: 10px 15px;
-            }
-            .main-content { margin-left: 0; width: 100%; padding: 20px; }
-            section {
-                padding-top: 40px;
-                margin-top: -40px;
-            }
-            header h1 {
-                font-size: 2rem;
-            }
-            h2 {
-                font-size: 1.6rem;
-            }
-            h3 {
-                font-size: 1.3rem;
-            }
-        }
-
-        /* Brand logo images with automatic light/dark switching */
-        .brand-logo { width: 28px; height: 28px; display:block; border-radius:8px; }
-        .logo-dark { display: none; }
-        .logo-light { display: block; }
-        @media (prefers-color-scheme: dark) {
-            .logo-light { display: none; }
-            .logo-dark { display: block; }
-        }
-        /* No manual theme override; follow system only */
-
-        /* Theme toggle button (in sidebar) */
-        .theme-toggle-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            margin: 6px 0 20px 0;
-            padding: 0;
-            border-radius: 8px;
-            border: 1px solid rgba(255,255,255,0.15);
-            background: transparent;
-            color: var(--sidebar-text);
-            cursor: pointer;
-            transition: background-color 0.2s ease, transform 0.2s ease, color 0.2s ease;
-        }
-        .theme-toggle-btn:hover {
-            background-color: var(--sidebar-hover-bg);
-            transform: translateY(-1px);
-        }
-        .theme-toggle-btn svg {
-            width: 22px;
-            height: 22px;
-            display: block;
-            fill: currentColor;
-        }
-        .theme-toggle-btn .icon { display: none; }
-        .theme-toggle-btn[data-mode="system"] .icon-system { display: block; }
-        .theme-toggle-btn[data-mode="light"] .icon-sun { display: block; }
-        .theme-toggle-btn[data-mode="dark"] .icon-moon { display: block; }
-    </style>
+    a:focus, button:focus, input:focus{box-shadow:0 0 0 3px rgba(37,99,235,0.12); outline: none; border-radius:8px}
+  </style>
 </head>
 <body>
-    <div class="container layout">
-        <nav class="sidebar" id="sidebar" aria-label="Sidebar">
-            <div class="section">Contents</div>
-            <div class="search"><svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.3-4.3M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16z" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input id="sidebarSearch" type="search" placeholder="Search sections..." autocomplete="off" aria-label="Search sections"/></div>
-            <ul class="nav-list" id="navList" itemscope itemtype="https://schema.org/TableOfContents">
-                <li class="nav-item"><a class="nav-link active" href="#introduction" itemprop="tocEntry">Introduction</a></li>
-                <li class="nav-item"><a class="nav-link" href="#installation" itemprop="tocEntry">Installation</a></li>
-                <li class="nav-item"><a class="nav-link" href="#quick-start" itemprop="tocEntry">Quick Start</a></li>
-                <li class="nav-item"><a class="nav-link" href="#core-components" itemprop="tocEntry">Core Components</a></li>
-                <li class="nav-item"><a class="nav-link" href="#ml-utilities" itemprop="tocEntry">Machine Learning</a></li>
-                <li class="nav-item"><a class="nav-link" href="#api" itemprop="tocEntry">REST API</a></li>
-                <li class="nav-item"><a class="nav-link" href="#hardware" itemprop="tocEntry">Hardware</a></li>
-                <li class="nav-item"><a class="nav-link" href="#advanced-sentiment-demo" itemprop="tocEntry">Advanced Sentiment Demo</a></li>
-                <li class="nav-item"><a class="nav-link" href="#cli" itemprop="tocEntry">CLI</a></li>
-                <li class="nav-item"><a class="nav-link" href="#advanced-usage" itemprop="tocEntry">Advanced Usage</a></li>
-                <li class="nav-item"><a class="nav-link" href="#api-reference" itemprop="tocEntry">API Reference</a></li>
-                <li class="nav-item"><a class="nav-link" href="#troubleshooting" itemprop="tocEntry">Troubleshooting</a></li>
-            </ul>
-        </nav>
-        <main class="main-content">
-            <article style="border:1px solid var(--header-border); background:var(--panel); border-radius:12px; padding:24px;">
-                <div class="hero" style="display:flex; align-items:center; gap:14px; flex-wrap:wrap; margin-bottom:12px;">
-                    <div class="brand" style="display:flex; align-items:center; gap:10px;">
-                        <img class="brand-logo logo-light" src="Light.png" alt="MeoMaya" style="width:28px;height:28px;border-radius:8px;">
-                        <img class="brand-logo logo-dark" src="Dark.png" alt="MeoMaya" style="width:28px;height:28px;border-radius:8px;">
-                        <h1 style="margin:0; font-size:28px;">MeoMaya Documentation</h1>
-                        <span class="pill">Docs</span>
-                    </div>
-                </div>
-                
-                <!-- Removed content-search box for a cleaner UX and focus on navigation. -->
+  <div class="container">
+    <header>
+      <a class="brand" href="#" aria-label="MeoMaya Home">
+        <div class="logo" aria-hidden="true">MM</div>
+        <div>
+          <div style="font-weight:800;color:#071133">MeoMaya</div>
+          <div class="muted">Clear, fast, accessible info</div>
+        </div>
+      </a>
 
-            <section id="introduction">
-                <h2>1. Introduction</h2>
-                <p>MeoMaya is a lightweight, high-performance Natural Language Processing (NLP) framework built entirely in Python. It is designed to be simple, modular, and efficient, making it an ideal choice for developers, researchers, and students who need a powerful NLP toolkit without the overhead of larger, more complex libraries.</p>
-                <p>The framework provides a complete text processing pipeline, including normalization, tokenization, part-of-speech (POS) tagging, and parsing. Additionally, it features a pure-Python machine learning stack with a TF-IDF vectorizer and a centroid-based classifier, allowing for straightforward implementation of text classification and analysis tasks.</p>
-                <div class="note">
-                    <p><strong>Philosophy:</strong> MeoMaya is built on the principle of providing core NLP functionalities in a clear and accessible manner. It prioritizes speed and low resource consumption, making it suitable for a wide range of applications, from web backends to embedded systems.</p>
-                </div>
-                <div class="callout success"><strong>Tip:</strong> Use the sidebar to jump across sections quickly.</div>
-            </section>
+      <nav aria-label="Primary">
+        <a href="#overview">Overview</a>
+        <a href="#docs">Docs</a>
+        <a href="#resources">Resources</a>
+        <button id="mm-theme-toggle" class="toggle" aria-pressed="false" title="Toggle dark mode">Theme</button>
+        <a class="cta" href="#get-started">Get started</a>
+      </nav>
+    </header>
 
-            <section id="installation">
-                <h2>2. Installation</h2>
-                <h3>Prerequisites</h3>
-                <ul>
-                    <li>Python 3.11 or higher</li>
-                    <li><code>pip</code> package manager</li>
-                </ul>
-                <h3>Steps</h3>
-                <p>1. <strong>Clone the repository:</strong></p>
-                <pre><code class="language-bash">git clone https://github.com/KashyapSinh-Gohil/meomaya.git
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <h1 id="hero-title">MeoMaya — Documentation & Info</h1>
+        <p class="muted">Lightweight, pure‑Python NLP with modular pipelines, fast TF‑IDF vectorizer and centroid classifier.</p>
+      </div>
+
+      <div class="controls" aria-hidden="false">
+        <div class="search" role="search" aria-label="Search site">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M21 21l-4.35-4.35" stroke="#9aa6bf" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.6"/><circle cx="11" cy="11" r="6" stroke="#9aa6bf" stroke-width="1.6"/></svg>
+          <input id="site-search" type="search" placeholder="Search pages, topics or docs..." />
+        </div>
+      </div>
+    </section>
+
+    <div class="layout" id="docs">
+      <nav class="sidebar" aria-label="Contents">
+        <div style="font-weight:700;margin-bottom:8px;color:#071133">Contents</div>
+        <ul class="toc" id="tocList">
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#installation">Installation</a></li>
+          <li><a href="#quick-start">Quick Start</a></li>
+          <li><a href="#core-components">Core Components</a></li>
+          <li><a href="#ml-utilities">Machine Learning</a></li>
+          <li><a href="#api">REST API</a></li>
+          <li><a href="#hardware">Hardware</a></li>
+          <li><a href="#advanced-sentiment-demo">Advanced Sentiment Demo</a></li>
+          <li><a href="#cli">CLI</a></li>
+          <li><a href="#advanced-usage">Advanced Usage</a></li>
+          <li><a href="#api-reference">API Reference</a></li>
+          <li><a href="#troubleshooting">Troubleshooting</a></li>
+        </ul>
+
+        <div style="margin-top:12px">
+          <button id="open-help" class="toggle" aria-haspopup="dialog">Help</button>
+          <a class="pill" href="#resources" style="margin-left:8px">Explore</a>
+        </div>
+      </nav>
+
+      <main class="docs" id="mainDoc">
+        <!-- Core documentation content (merged from previous index) -->
+        <section id="introduction">
+          <h2>1. Introduction</h2>
+          <p>MeoMaya is a lightweight, high-performance Natural Language Processing (NLP) framework built entirely in Python. It is designed to be simple, modular, and efficient, making it an ideal choice for developers, researchers, and students who need a powerful NLP toolkit without the overhead of larger, more complex libraries.</p>
+          <p>The framework provides a complete text processing pipeline, including normalization, tokenization, part-of-speech (POS) tagging, and parsing. Additionally, it features a pure-Python machine learning stack with a TF-IDF vectorizer and a centroid-based classifier, allowing for straightforward implementation of text classification and analysis tasks.</p>
+          <div class="note"><strong>Philosophy:</strong> MeoMaya prioritizes clarity, speed and low resource consumption.</div>
+        </section>
+
+        <section id="installation">
+          <h2>2. Installation</h2>
+          <h3>Prerequisites</h3>
+          <ul>
+            <li>Python 3.11 or higher</li>
+            <li><code>pip</code> package manager</li>
+          </ul>
+          <h3>Steps</h3>
+          <pre><code>git clone https://github.com/KashyapSinh-Gohil/meomaya.git
 cd meomaya</code></pre>
-                <p>2. <strong>Install core dependencies:</strong></p>
-                <pre><code class="language-bash">python -m venv .venv
+          <pre><code>python -m venv .venv
 source .venv/bin/activate
 pip install -r meomaya/requirements.txt</code></pre>
-                <p>3. <strong>Optional Dependencies:</strong></p>
-                <p>For <strong>Indian language support</strong>, you need <code>indic-nlp-library</code>:</p>
-                <pre><code class="language-bash">pip install indic-nlp-library</code></pre>
-                 <p>For <strong>API and development</strong> tools, install the development dependencies:</p>
-                <pre><code class="language-bash">pip install -r requirements-dev.txt</code></pre>
-            </section>
+          <p>Optional: <code>pip install indic-nlp-library</code> for Indian language support.</p>
+        </section>
 
-            <section id="quick-start">
-                <h2>3. Quick Start</h2>
-                <h3>Using the <code>Modelify</code> Class</h3>
-                <p>The <code>Modelify</code> class is the simplest entry point to MeoMaya's NLP pipeline. It encapsulates all the core components and runs them in the correct order.</p>
-                <pre><code class="language-python">from meomaya.core.modelify import Modelify
-
-# Initialize the model for text processing
+        <section id="quick-start">
+          <h2>3. Quick Start</h2>
+          <h3>Modelify</h3>
+          <pre><code>from meomaya.core.modelify import Modelify
 m = Modelify(mode="text")
-
-# Run the pipeline on your text
 result = m.run("MeoMaya makes NLP easy and fun!")
-
-# The result is a dictionary containing the processed text
 import json
 print(json.dumps(result, indent=2))</code></pre>
-                <h3>Using the CLI</h3>
-                <p>For quick tasks, you can use MeoMaya directly from your terminal. This is useful for testing or integrating with shell scripts.</p>
-                <pre><code class="language-bash">python -m meomaya "MeoMaya is great for command-line use." --mode text</code></pre>
-            </section>
+          <h3>CLI</h3>
+          <pre><code>python -m meomaya "MeoMaya is great for command-line use." --mode text</code></pre>
+        </section>
 
-            <section id="core-components">
-                <h2>4. Core Components</h2>
-                <p>MeoMaya's core functionality is built around a pipeline of four main components. You can use them individually or together to build custom NLP workflows.</p>
-                <h3>Normalizer</h3>
-                <p>The <code>Normalizer</code> cleans and standardizes text. Its primary function is to convert text to lowercase, but it can be extended to handle other normalization tasks like removing punctuation or expanding contractions.</p>
-                <pre><code class="language-python">from meomaya.core.normalizer import Normalizer
-
+        <section id="core-components">
+          <h2>4. Core Components</h2>
+          <h3>Normalizer</h3>
+          <pre><code>from meomaya.core.normalizer import Normalizer
 normalizer = Normalizer(lang="en")
-normalized_text = normalizer.normalize("This is an EXAMPLE sentence with some UPPERCASE words.")
-# Output: "this is an example sentence with some uppercase words."</code></pre>
-                <h3>Tokenizer</h3>
-                <p>The <code>Tokenizer</code> breaks down a string of text into a list of individual tokens. This is a fundamental step in most NLP tasks. MeoMaya's tokenizer is designed to handle various languages and can be customized.</p>
-                <pre><code class="language-python">from meomaya.core.tokenizer import Tokenizer
+normalizer.normalize("This is an EXAMPLE")</code></pre>
 
+          <h3>Tokenizer</h3>
+          <pre><code>from meomaya.core.tokenizer import Tokenizer
 tokenizer = Tokenizer(lang="en")
-tokens = tokenizer.tokenize("Hello, world! This is MeoMaya.")
-# Output: ['Hello', ',', 'world', '!', 'This', 'is', 'MeoMaya', '.']</code></pre>
-                <h3>Tagger</h3>
-                <p>The <code>Tagger</code>, or Part-of-Speech (POS) Tagger, assigns a grammatical category (like noun, verb, adjective, etc.) to each token. This provides valuable semantic information for further analysis.</p>
-                <pre><code class="language-python">from meomaya.core.tagger import Tagger
+tokens = tokenizer.tokenize("Hello, world!")</code></pre>
 
+          <h3>Tagger</h3>
+          <pre><code>from meomaya.core.tagger import Tagger
 tagger = Tagger(lang="en")
-tagged_tokens = tagger.tag(['MeoMaya', 'is', 'a', 'powerful', 'tool'])
-# Output: [('MeoMaya', 'NNP'), ('is', 'VBZ'), ('a', 'DT'), ('powerful', 'JJ'), ('tool', 'NN')]</code></pre>
-                <h3>Parser</h3>
-                <p>The <code>Parser</code> analyzes the grammatical structure of a sentence and creates a dependency parse tree. This reveals the relationships between words in the sentence. Currently, the parser in MeoMaya is a placeholder for a more complex implementation, but it demonstrates the structure of the pipeline.</p>
-                <pre><code class="language-python">from meomaya.core.parser import Parser
+tagger.tag(['MeoMaya','is','cool'])</code></pre>
 
+          <h3>Parser</h3>
+          <pre><code>from meomaya.core.parser import Parser
 parser = Parser(lang="en")
-parse_tree = parser.parse([('MeoMaya', 'NNP'), ('is', 'VBZ'), ('cool', 'JJ')])
-# Output: {'tree': [('MeoMaya', 'NNP'), ('is', 'VBZ'), ('cool', 'JJ')]}</code></pre>
-            </section>
+parser.parse([('MeoMaya','NNP'),('is','VBZ')])</code></pre>
+        </section>
 
-            <section id="ml-utilities">
-                <h2>5. Machine Learning Utilities</h2>
-                <p>MeoMaya includes a set of pure-Python machine learning tools for common NLP tasks like text classification.</p>
-                <h3>Vectorizer</h3>
-                <p>The <code>Vectorizer</code> converts text documents into numerical representations. It uses the Term Frequency-Inverse Document Frequency (TF-IDF) algorithm, which reflects how important a word is to a document in a collection or corpus.</p>
-                <pre><code class="language-python">from meomaya.ml.vectorizer import Vectorizer
-
-texts = [
-    "MeoMaya is a great NLP framework.",
-    "I enjoy using Python for NLP.",
-    "This framework is fast and efficient."
-]
+        <section id="ml-utilities">
+          <h2>5. Machine Learning Utilities</h2>
+          <h3>Vectorizer</h3>
+          <pre><code>from meomaya.ml.vectorizer import Vectorizer
 vectorizer = Vectorizer()
-X = vectorizer.fit_transform(texts)
+X = vectorizer.fit_transform([...])</code></pre>
 
-# X is a list of TF-IDF vectors, representing the input texts
-for i, doc in enumerate(texts):
-    print(f"Document {i+1}: {X[i]}")</code></pre>
-                <h3>Classifier</h3>
-                <p>The <code>Classifier</code> is a centroid-based classifier that uses cosine similarity to determine the category of a given text. It's a simple yet effective algorithm that works well for many text classification problems. For a more detailed example, including model training, saving, and prediction, please refer to the <a href="#advanced-sentiment-demo">Advanced Sentiment Demo</a> section.</p>
-                <pre><code class="language-python">from meomaya.ml.classifier import Classifier
-from meomaya.ml.vectorizer import Vectorizer
+          <h3>Classifier</h3>
+          <pre><code>from meomaya.ml.classifier import Classifier
+# train, save, load, predict</code></pre>
+        </section>
 
-# Example: Basic classification after training
-# (Assuming vectorizer and classifier are already trained and loaded)
-# vectorizer = ...
-# classifier = ...
+        <section id="api">
+          <h2>6. REST API</h2>
+          <pre><code>uvicorn meomaya.api.server:app --host 0.0.0.0 --port 8000</code></pre>
+          <pre><code>curl -X POST http://localhost:8000/run -H 'Content-Type: application/json' \
+-d '{"input":"Hello","mode":"text"}'</code></pre>
+        </section>
 
-# new_text = "This is a great product!"
-# X_new = vectorizer.transform([new_text])
-# prediction = classifier.classify(X_new)
-# print(prediction)</code></pre>
-            </section>
-
-            <section id="api">
-                <h2>6. REST API</h2>
-                <p>Run the local FastAPI server (no third-party services required):</p>
-                <pre><code class="language-bash">uvicorn meomaya.api.server:app --host 0.0.0.0 --port 8000</code></pre>
-                <p>Call the API:</p>
-                <pre><code class="language-bash">curl -X POST http://localhost:8000/run -H 'Content-Type: application/json' \
--d '{"input": "Hello from MeoMaya!", "mode": "text"}'</code></pre>
-                <p>Batch endpoint:</p>
-                <pre><code class="language-bash">curl -X POST http://localhost:8000/run/batch -H 'Content-Type: application/json' \
--d '{"inputs": ["hi", "there"], "mode": "text"}'</code></pre>
-            </section>
-
-            <section id="hardware">
-                <h2>7. Hardware Selection</h2>
-                <p>MeoMaya detects hardware automatically (CPU/CUDA/MPS) without requiring torch by default.</p>
-                <pre><code class="language-python">from meomaya.core.hardware import select_device
+        <section id="hardware">
+          <h2>7. Hardware Selection</h2>
+          <pre><code>from meomaya.core.hardware import select_device
 print(select_device())  # 'cpu', 'cuda', or 'mps'</code></pre>
-                <p>Override via environment variable:</p>
-                <pre><code class="language-bash">export MEOMAYA_DEVICE=cpu</code></pre>
-            </section>
+        </section>
 
-            <section id="advanced-sentiment-demo">
-                <h2>5.1 Advanced Sentiment Demo</h2>
-                <p>The <code>full_nlp_workflow_demo.py</code> script located in the <code>meomaya/examples/</code> directory demonstrates the MeoMaya NLP workflow end-to-end, including vectorization and classification.</p>
+        <section id="advanced-sentiment-demo">
+          <h2>Advanced Sentiment Demo</h2>
+          <p>See <code>meomaya/examples/full_nlp_workflow_demo.py</code> to train and save a vectorizer & classifier.</p>
+          <pre><code>python meomaya/examples/full_nlp_workflow_demo.py</code></pre>
+        </section>
 
-                <h3>Training the Model</h3>
-                <p>Before you can predict sentiment, you need to train the model. This command will train the model using a sample dataset and save the trained vectorizer and classifier to the <code>sentiment_model/</code> directory.</p>
-                <pre><code class="language-bash">python meomaya/examples/full_nlp_workflow_demo.py</code></pre>
-                <div class="note">
-                    <p><strong>Note:</strong> The <code>PYTHONPATH</code> environment variable is set to ensure the script can locate the MeoMaya modules. You only need to train the model once.</p>
-                </div>
+        <section id="cli">
+          <h2>CLI</h2>
+          <pre><code>python -m meomaya "Your text" --mode text</code></pre>
+        </section>
 
-                <h3>Batch processing example</h3>
-                <p>The demo also shows how to process multiple inputs using <code>TextPipeline.process_batch</code>.</p>
-            </section>
-
-            <section id="cli">
-                <h2>6. Command-Line Interface (CLI)</h2>
-                <p>MeoMaya's CLI provides a convenient way to access its features without writing any Python code.</p>
-                <h3>Basic Usage</h3>
-                <p>Use the module entry point:</p>
-                <pre><code class="language-bash">python -m meomaya "Your text here" --mode text</code></pre>
-                <h3>Options</h3>
-                <ul>
-                    <li><code>--mode</code>: Override auto-detected mode: <code>text</code>, <code>audio</code>, <code>image</code>, <code>video</code>, <code>3d</code>, <code>fusion</code>.</li>
-                    <li><code>--model</code>: Model name (placeholder; reserved for future model selection).</li>
-                </ul>
-            </section>
-
-            <section id="advanced-usage">
-                <h2>7. Advanced Usage</h2>
-                <h3>Building a Custom Pipeline</h3>
-                <p>One of MeoMaya's strengths is its modularity. You can easily create your own custom NLP pipelines by combining the core components in different ways.</p>
-                <pre><code class="language-python">from meomaya.core.normalizer import Normalizer
+        <section id="advanced-usage">
+          <h2>Advanced Usage</h2>
+          <pre><code>from meomaya.core.normalizer import Normalizer
 from meomaya.core.tokenizer import Tokenizer
 from meomaya.core.tagger import Tagger
 from meomaya.core.parser import Parser
+# ...build pipelines...</code></pre>
+        </section>
 
-def custom_pipeline(text: str, lang: str = "en"):
-    """A custom NLP pipeline that normalizes, tokenizes, and tags text."""
-    normalizer = Normalizer(lang)
-    tokenizer = Tokenizer(lang)
-    tagger = Tagger(lang)
+        <section id="api-reference">
+          <h2>API Reference</h2>
+          <ul>
+            <li><code>Normalizer(lang: str = "en")</code> — <code>normalize(text: str) -> str</code></li>
+            <li><code>Tokenizer(lang: str = "en")</code> — <code>tokenize(text: str) -> list[str]</code></li>
+            <li><code>Tagger(lang: str = "en")</code> — <code>tag(tokens: list[str]) -> list[tuple[str,str]]</code></li>
+            <li><code>Parser(lang: str = "en")</code> — <code>parse(tagged_tokens: list[tuple[str,str]]) -> dict</code></li>
+          </ul>
+        </section>
 
-    normalized_text = normalizer.normalize(text)
-    tokens = tokenizer.tokenize(normalized_text)
-    tagged_tokens = tagger.tag(tokens)
+        <section id="troubleshooting">
+          <h2>Troubleshooting</h2>
+          <ol>
+            <li>ImportError for <code>indic_nlp_library</code>: install optional dependency.</li>
+            <li>Incorrect path for corpus: verify file path.</li>
+            <li>Performance: process in batches for large datasets.</li>
+          </ol>
+          <p>See tests/ or open an issue on the project repo for help.</p>
+        </section>
 
-    return {
-        'normalized': normalized_text,
-        'tokens': tokens,
-        'tagged': tagged_tokens,
-    }
-
-# Run the custom pipeline
-result = custom_pipeline("This is a demonstration of a custom pipeline.")
-print(result)</code></pre>
-            </section>
-
-            <section id="api-reference">
-                <h2>8. API Reference</h2>
-                <h3>Core Module</h3>
-                <ul>
-                    <li><code>Normalizer(lang: str = "en")</code>
-                        <ul><li><code>normalize(text: str) -> str</code></li></ul>
-                    </li>
-                    <li><code>Tokenizer(lang: str = "en")</code>
-                        <ul><li><code>tokenize(text: str) -> list[str]</code></li></ul>
-                    </li>
-                    <li><code>Tagger(lang: str = "en")</code>
-                         <ul><li><code>tag(tokens: list[str]) -> list[tuple[str, str]]</code></li></ul>
-                    </li>
-                    <li><code>Parser(lang: str = "en")</code>
-                        <ul><li><code>parse(tagged_tokens: list[tuple[str, str]]) -> dict</code></li></ul>
-                    </li>
-                </ul>
-                <h3>ML Module</h3>
-                <ul>
-                    <li><code>Vectorizer()</code>
-                        <ul>
-                            <li><code>fit(documents: list[str])</code></li>
-                            <li><code>transform(documents: list[str]) -> list[list[float]]</code></li>
-                            <li><code>fit_transform(documents: list[str]) -> list[list[float]]</code></li>
-                        </ul>
-                    </li>
-                    <li><code>Classifier()</code>
-                        <ul>
-                            <li><code>train(X: list[list[float]], y: list[str])</code></li>
-                            <li><code>classify(X: list[list[float]]) -> list[str]</code></li>
-                        </ul>
-                    </li>
-                </ul>
-            </section>
-
-            <section id="troubleshooting">
-                <h2>9. Troubleshooting</h2>
-                <h3>Common Issues</h3>
-                <ol>
-                    <li><strong>ImportError for <code>indic_nlp_library</code></strong>: If you are working with Indian languages and get an import error, make sure you have installed the optional dependency: <code>pip install indic-nlp-library</code>.</li>
-                    <li><strong>Incorrect Path for Corpus</strong>: When using the CLI with a corpus file, ensure you provide the correct path to the file.</li>
-                    <li><strong>Performance</strong>: For very large datasets, consider processing the data in batches to manage memory usage.</li>
-                </ol>
-                <h3>Getting Help</h3>
-                <p>If you're stuck, you can:</p>
-                <ul>
-                    <li>Review the test files in the <code>tests/</code> directory for more usage examples.</li>
-                    <li>Open an issue on the <a href="https://github.com/KashyapSinh-Gohil/meomaya/issues">GitHub issue tracker</a>.</li>
-                </ul>
-            </section>
-        </main>
+        <footer style="margin-top:20px">
+          <div class="muted">© <span id="year"></span> MeoMaya</div>
+        </footer>
+      </main>
     </div>
-    <div class="scrim" id="scrim"></div>
-    <script>
-        // Structured data (JSON-LD)
-        const ld = {
-            "@context": "https://schema.org",
-            "@type": "SoftwareApplication",
-            "name": "MeoMaya",
-            "applicationCategory": "NLP Framework",
-            "operatingSystem": "Cross-platform",
-            "description": "Pure-Python, low-energy, high-speed NLP framework with modular pipelines and an offline REST API.",
-            "url": "https://github.com/KashyapSinh-Gohil/MeoMaya-Info/",
-            "image": ["Light.png", "Dark.png"],
-        };
-        const ldScript = document.createElement('script');
-        ldScript.type = 'application/ld+json';
-        ldScript.textContent = JSON.stringify(ld);
-        document.head.appendChild(ldScript);
 
+    <footer style="margin-top:18px;text-align:center;color:var(--muted);font-size:13px">
+      Built with accessibility and a clean UI in mind.
+    </footer>
+  </div>
 
-        
+  <script>
+    // theme toggle
+    (function(){
+      const root = document.documentElement;
+      const toggle = document.getElementById('mm-theme-toggle');
+      const year = document.getElementById('year');
+      year.textContent = new Date().getFullYear();
 
+      const stored = localStorage.getItem('mm-theme');
+      const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+      if (stored === 'dark' || (!stored && prefersDark)) {
+        root.setAttribute('data-theme','dark');
+        toggle.setAttribute('aria-pressed','true');
+      }
 
+      toggle.addEventListener('click', () => {
+        const isDark = root.getAttribute('data-theme') === 'dark';
+        root.setAttribute('data-theme', isDark ? '' : 'dark');
+        toggle.setAttribute('aria-pressed', String(!isDark));
+        localStorage.setItem('mm-theme', isDark ? 'light' : 'dark');
+      });
 
-        // Active link switching using IntersectionObserver
-        const navLinks = Array.from(document.querySelectorAll('.nav-link'));
-        const watched = navLinks.map(a => document.querySelector(a.getAttribute('href'))).filter(Boolean);
-        const observer = new IntersectionObserver((entries)=>{
-            entries.forEach(e=>{
-                const idx = watched.indexOf(e.target);
-                if(idx>=0 && e.isIntersecting){
-                    navLinks.forEach(l=>l.classList.remove('active'));
-                    navLinks[idx].classList.add('active');
-                }
-            });
-        }, {rootMargin:'-40% 0px -55% 0px', threshold:0});
-        watched.forEach(s=>observer.observe(s));
-
-        // Theme handling (system-aware with real-time updates)
-        const rootEl = document.documentElement;
-        const themeToggleBtn = document.getElementById('themeToggle');
-        const THEME_KEY = 'themePreference'; // 'system' | 'light' | 'dark'
-
-        function setButtonLabel(pref) {
-            if (!themeToggleBtn) return;
-            themeToggleBtn.setAttribute('data-mode', pref);
-            themeToggleBtn.setAttribute('aria-label', `Theme: ${pref}`);
+      // keyboard: focus search with "/" key
+      const search = document.getElementById('site-search');
+      window.addEventListener('keydown', (e) => {
+        if (e.key === '/' && document.activeElement !== search) {
+          e.preventDefault(); search.focus();
         }
+      });
 
-        function applyThemePreference(pref) {
-            if (pref === 'light' || pref === 'dark') {
-                rootEl.setAttribute('data-theme', pref);
-            } else {
-                rootEl.removeAttribute('data-theme'); // follow system
-                pref = 'system';
-            }
-            localStorage.setItem(THEME_KEY, pref);
-            setButtonLabel(pref);
-        }
-
-        function getThemePreference() {
-            const saved = localStorage.getItem(THEME_KEY);
-            return saved === 'light' || saved === 'dark' ? saved : 'system';
-        }
-
-        // Initialize
-        applyThemePreference(getThemePreference());
-
-        // Toggle cycles: system -> light -> dark -> system
-        if (themeToggleBtn) {
-            themeToggleBtn.addEventListener('click', () => {
-                const current = getThemePreference();
-                const next = current === 'system' ? 'light' : (current === 'light' ? 'dark' : 'system');
-                applyThemePreference(next);
-            });
-        }
-
-        // Always react to system changes when pref is 'system'
-        const media = window.matchMedia('(prefers-color-scheme: dark)');
-        media.addEventListener('change', () => {
-            if (getThemePreference() === 'system') {
-                applyThemePreference('system');
-            }
+      // Smooth scroll and TOC active state
+      document.querySelectorAll('a[href^="#"]').forEach(a=>{
+        a.addEventListener('click', (e)=>{
+          const targetId = a.getAttribute('href').slice(1);
+          const target = document.getElementById(targetId);
+          if (target){ e.preventDefault(); target.scrollIntoView({behavior:'smooth', block:'start'}); }
         });
+      });
 
-        // Mobile sidebar toggle via header menu button
-        const menuBtn = document.getElementById('sidebarToggle');
-        const sidebarEl = document.getElementById('sidebar');
-        const scrim = document.getElementById('scrim');
-        function toggleNav(force){
-            const open = force ?? !sidebarEl.classList.contains('open');
-            sidebarEl.classList.toggle('open', open);
-            scrim.classList.toggle('show', open);
-        }
-        if(menuBtn){ menuBtn.addEventListener('click', ()=>toggleNav()); }
-        if(scrim){ scrim.addEventListener('click', ()=>toggleNav(false)); }
-
-        // Sidebar live search filter
-        const sidebarSearch = document.getElementById('sidebarSearch');
-        if(sidebarSearch){
-            const sideLinks = document.querySelectorAll('.nav-list .nav-link');
-            
-            // Debug: Check if input is working
-            console.log('Sidebar search input found:', sidebarSearch);
-            
-            sidebarSearch.addEventListener('input', (e)=>{
-                console.log('Search input event:', e.target.value);
-                const q = sidebarSearch.value.toLowerCase();
-                sideLinks.forEach(link => {
-                    const text = link.textContent.toLowerCase();
-                    const shouldShow = text.includes(q);
-                    link.parentElement.style.display = shouldShow ? '' : 'none';
-                });
-            });
-            
-            // Also listen for keydown to ensure it's working
-            sidebarSearch.addEventListener('keydown', (e)=>{
-                console.log('Key pressed:', e.key);
-            });
-        }
-
-        // Removed content search logic as requested
-
-        // Enhanced hover interactions
-        document.addEventListener('DOMContentLoaded', function() {
-            // Removed parallax effect to avoid layout shift at page end
-            
-            // Add ripple effect to buttons
-            const buttons = document.querySelectorAll('.btn, .tab');
-            buttons.forEach(button => {
-                button.addEventListener('click', function(e) {
-                    const ripple = document.createElement('span');
-                    const rect = this.getBoundingClientRect();
-                    const size = Math.max(rect.width, rect.height);
-                    const x = e.clientX - rect.left - size / 2;
-                    const y = e.clientY - rect.top - size / 2;
-                    
-                    ripple.style.cssText = `
-                        position: absolute;
-                        width: ${size}px;
-                        height: ${size}px;
-                        left: ${x}px;
-                        top: ${y}px;
-                        background: rgba(255,255,255,0.3);
-                        border-radius: 50%;
-                        transform: scale(0);
-                        animation: ripple 0.6s linear;
-                        pointer-events: none;
-                    `;
-                    
-                    this.appendChild(ripple);
-                    setTimeout(() => ripple.remove(), 600);
-                });
-            });
+      // Highlight TOC entry based on scroll
+      const tocLinks = Array.from(document.querySelectorAll('.toc a'));
+      const sections = tocLinks.map(l => document.getElementById(l.getAttribute('href').slice(1))).filter(Boolean);
+      const obs = new IntersectionObserver(entries=>{
+        entries.forEach(en=>{
+          if(en.isIntersecting){
+            tocLinks.forEach(l=>l.classList.remove('active'));
+            const idx = sections.indexOf(en.target);
+            if(idx>=0) tocLinks[idx].classList.add('active');
+          }
         });
-        
-        // Add ripple animation
-        const style = document.createElement('style');
-        style.textContent = `
-            @keyframes ripple {
-                to {
-                    transform: scale(4);
-                    opacity: 0;
-                }
-            }
-        `;
-        document.head.appendChild(style);
-    </script>
+      }, {rootMargin:'-30% 0px -60% 0px', threshold:0});
+      sections.forEach(s=>obs.observe(s));
+
+      // Simple search that filters TOC entries
+      const siteSearch = document.getElementById('site-search');
+      siteSearch.addEventListener('input', ()=>{
+        const q = siteSearch.value.toLowerCase().trim();
+        document.querySelectorAll('.toc a').forEach(a=>{
+          const show = a.textContent.toLowerCase().includes(q);
+          a.style.display = show ? '' : 'none';
+        });
+      });
+
+      // Feedback form / help stub (if present)
+      const helpBtn = document.getElementById('open-help');
+      if(helpBtn){
+        helpBtn.addEventListener('click', ()=> alert('Help: open the GitHub repo or tests folder for examples.'));
+      }
+    })();
+  </script>
 </body>
 </html>
