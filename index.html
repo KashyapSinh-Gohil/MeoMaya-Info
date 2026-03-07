@@ -89,12 +89,13 @@
         <a href="#overview">Overview</a>
         <a href="#docs">Docs</a>
         <a href="#resources">Resources</a>
+        <a href="#contact">Contact</a>
         <button id="mm-theme-toggle" class="toggle" aria-pressed="false" title="Toggle dark mode">Theme</button>
         <a class="cta" href="#get-started">Get started</a>
       </nav>
     </header>
 
-    <section class="hero" aria-labelledby="hero-title">
+    <section class="hero" id="overview" aria-labelledby="hero-title">
       <div>
         <h1 id="hero-title">MeoMaya — Documentation & Info</h1>
         <p class="muted">Lightweight, pure‑Python NLP with modular pipelines, fast TF‑IDF vectorizer and centroid classifier.</p>
@@ -157,8 +158,8 @@ pip install -r meomaya/requirements.txt</code></pre>
           <p>Optional: <code>pip install indic-nlp-library</code> for Indian language support.</p>
         </section>
 
-        <section id="quick-start">
-          <h2>3. Quick Start</h2>
+        <section id="quick-start" data-alias="get-started">
+          <h2 id="get-started">3. Quick Start</h2>
           <h3>Modelify</h3>
           <pre><code>from meomaya.core.modelify import Modelify
 m = Modelify(mode="text")
@@ -257,6 +258,27 @@ from meomaya.core.parser import Parser
           <p>See tests/ or open an issue on the project repo for help.</p>
         </section>
 
+
+
+        <section id="resources">
+          <h2>Resources</h2>
+          <ul>
+            <li><a href="https://github.com/KashyapSinh-Gohil/meomaya" target="_blank" rel="noopener noreferrer">GitHub Repository</a></li>
+            <li><a href="#api-reference">API Reference</a> and <a href="#troubleshooting">Troubleshooting</a></li>
+            <li><a href="#advanced-sentiment-demo">Full NLP Workflow Demo</a></li>
+          </ul>
+        </section>
+
+        <section id="contact">
+          <h2>Contact &amp; Feedback</h2>
+          <p>Questions, comments, or bug reports are welcome.</p>
+          <form id="feedback" style="display:grid;grid-template-columns:1fr 120px;gap:10px;margin-top:12px" aria-label="Feedback form">
+            <input name="email" type="email" placeholder="you@domain.com" style="padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)" />
+            <button type="submit" class="cta" style="width:100%">Send</button>
+            <textarea name="message" placeholder="Short message..." rows="3" style="grid-column:1/-1;padding:10px;border-radius:8px;border:1px solid rgba(0,0,0,0.06)"></textarea>
+          </form>
+        </section>
+
         <footer style="margin-top:20px">
           <div class="muted">© <span id="year"></span> MeoMaya</div>
         </footer>
@@ -335,6 +357,15 @@ from meomaya.core.parser import Parser
       const helpBtn = document.getElementById('open-help');
       if(helpBtn){
         helpBtn.addEventListener('click', ()=> alert('Help: open the GitHub repo or tests folder for examples.'));
+      }
+
+      const feedbackForm = document.getElementById('feedback');
+      if (feedbackForm) {
+        feedbackForm.addEventListener('submit', (e) => {
+          e.preventDefault();
+          alert('Thanks — feedback submitted. (This is a demo.)');
+          feedbackForm.reset();
+        });
       }
     })();
   </script>
