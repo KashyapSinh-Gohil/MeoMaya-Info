@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
   <url>
-    <loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/</loc>
+    <loc>https://kashyapsinh-gohil.github.io/MeoMaya-Info/</loc>
+    <lastmod>2026-03-07</lastmod>
     <image:image>
-      <image:loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/Light.png</image:loc>
+      <image:loc>https://kashyapsinh-gohil.github.io/MeoMaya-Info/Light.png</image:loc>
       <image:title>MeoMaya Logo (Light)</image:title>
       <image:caption>Brand logo used for light mode.</image:caption>
     </image:image>
     <image:image>
-      <image:loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/Dark.png</image:loc>
+      <image:loc>https://kashyapsinh-gohil.github.io/MeoMaya-Info/Dark.png</image:loc>
       <image:title>MeoMaya Logo (Dark)</image:title>
       <image:caption>Brand logo used for dark mode.</image:caption>
     </image:image>
   </url>
 </urlset>
-
