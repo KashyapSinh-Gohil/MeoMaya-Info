@@ -9,6 +9,10 @@
   <style>
     :root{
       --bg:#f6f7fb; --card:#ffffff; --muted:#6b7280; --accent:#2563eb;
+      --text-primary:#071133;
+      --text-secondary:#334155;
+      --nav-link:var(--text-secondary);
+      --nav-link-hover:var(--text-primary);
       --glass: rgba(255,255,255,0.6);
       --radius:12px;
       --max-width:1100px;
@@ -16,6 +20,10 @@
     }
     [data-theme="dark"]{
       --bg:#0b1220; --card:#071128; --muted:#9aa6bf; --accent:#60a5fa; --glass: rgba(255,255,255,0.03);
+      --text-primary:#e6ecff;
+      --text-secondary:#c7d3ef;
+      --nav-link:var(--text-secondary);
+      --nav-link-hover:#f8fbff;
       color-scheme: dark;
     }
 
@@ -35,11 +43,11 @@
       display:inline-grid;place-items:center;font-weight:700;color:white;box-shadow:0 6px 18px rgba(37,99,235,0.12)
     }
     nav{display:flex;gap:12px;align-items:center}
-    nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--muted);font-weight:600}
-    nav a:hover, nav a:focus{background:var(--glass);color:var(--card);outline: none}
+    nav a{padding:8px 12px;border-radius:8px;text-decoration:none;color:var(--nav-link);font-weight:600}
+    nav a:hover, nav a:focus{background:var(--glass);color:var(--nav-link-hover);outline: none}
     .cta{background:var(--accent);color:white;padding:9px 14px;border-radius:10px;font-weight:700}
     .hero{display:grid;grid-template-columns:1fr;gap:18px;padding:22px;border-radius:var(--radius);background:linear-gradient(180deg,rgba(255,255,255,0.6),rgba(255,255,255,0.4));box-shadow:0 6px 24px rgba(12,20,40,0.06)}
-    .hero h1{margin:0;font-size:28px;color: #071133}
+    .hero h1{margin:0;font-size:28px;color:var(--text-primary)}
     .hero p{margin:0;color:var(--muted)}
     .controls{display:flex;gap:12px;align-items:center}
     .search{flex:1;display:flex;background:var(--card);padding:8px;border-radius:10px;align-items:center;gap:8px}
@@ -47,7 +55,7 @@
     .toggle{background:transparent;border:1px solid transparent;padding:8px;border-radius:8px;cursor:pointer}
     .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
     .card{background:var(--card);padding:16px;border-radius:12px;box-shadow:0 6px 18px rgba(12,20,40,0.04);color:inherit}
-    .card h3{margin:0 0 8px 0;color:#071133}
+    .card h3{margin:0 0 8px 0;color:var(--text-primary)}
     footer{display:flex;justify-content:space-between;align-items:center;padding:12px 0;color:var(--muted);font-size:14px;border-top:1px dashed rgba(0,0,0,0.04)}
 
     /* Responsive */
@@ -75,7 +83,7 @@
       <a class="brand" href="#" aria-label="MeoMaya Home">
         <div class="logo" aria-hidden="true">MM</div>
         <div>
-          <div style="font-weight:800;color:#071133">MeoMaya</div>
+          <div style="font-weight:800;color:var(--text-primary)">MeoMaya</div>
           <div class="muted">Info & resources</div>
         </div>
       </a>
