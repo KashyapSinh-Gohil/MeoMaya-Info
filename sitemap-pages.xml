@@ -1,25 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <!-- Root docs page -->
   <url>
-    <loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/</loc>
-    <lastmod>2025-08-13</lastmod>
+    <loc>https://kashyapsinh-gohil.github.io/MeoMaya-Info/</loc>
+    <lastmod>2026-03-07</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
-
-  <!-- Section anchors as separate URLs (optional but helpful for deep linking) -->
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#introduction</loc><priority>0.8</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#installation</loc><priority>0.8</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#quick-start</loc><priority>0.8</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#core-components</loc><priority>0.8</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#ml-utilities</loc><priority>0.7</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#api</loc><priority>0.7</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#hardware</loc><priority>0.6</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#advanced-sentiment-demo</loc><priority>0.6</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#cli</loc><priority>0.6</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#advanced-usage</loc><priority>0.6</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#api-reference</loc><priority>0.6</priority></url>
-  <url><loc>https://github.com/KashyapSinh-Gohil/MeoMaya-Info/#troubleshooting</loc><priority>0.6</priority></url>
 </urlset>
-
